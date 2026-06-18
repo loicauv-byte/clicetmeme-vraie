@@ -133,7 +133,23 @@
 
   .logo { font-family: 'Fredoka One', cursive; font-size: 28px; color: var(--orange); text-decoration: none; }
 
-  header a.cta-header {
+  /* NAV */
+  nav { display: flex; align-items: center; gap: 8px; }
+
+  nav a.nav-link {
+    font-size: 15px;
+    font-weight: 700;
+    color: var(--text-light);
+    text-decoration: none;
+    padding: 8px 16px;
+    border-radius: 50px;
+    transition: background 0.2s, color 0.2s;
+  }
+
+  nav a.nav-link:hover { background: var(--orange-pale); color: var(--orange); }
+  nav a.nav-link.active { color: var(--orange); }
+
+  nav a.cta-header {
     background: var(--orange);
     color: #fff;
     padding: 12px 24px;
@@ -142,7 +158,10 @@
     font-weight: 700;
     text-decoration: none;
     transition: background 0.2s;
+    margin-left: 4px;
   }
+
+  nav a.cta-header:hover { background: #2d7a4f; }
 
   .hero {
     background: linear-gradient(135deg, #2d7a4f 0%, #5cb87a 100%);
@@ -165,6 +184,8 @@
 
   .hero p { font-size: clamp(17px, 2.5vw, 22px); color: rgba(255,255,255,0.92); line-height: 1.6; margin-bottom: 36px; }
 
+  .hero-btns { display: flex; gap: 16px; justify-content: center; flex-wrap: wrap; }
+
   .hero-cta {
     display: inline-block;
     background: #fff;
@@ -177,6 +198,21 @@
     box-shadow: 0 6px 24px rgba(0,0,0,0.15);
     transition: transform 0.2s, box-shadow 0.2s;
   }
+
+  .hero-cta-secondary {
+    display: inline-block;
+    background: rgba(255,255,255,0.15);
+    color: #fff;
+    font-size: 18px;
+    font-weight: 700;
+    padding: 18px 36px;
+    border-radius: 60px;
+    text-decoration: none;
+    border: 2px solid rgba(255,255,255,0.6);
+    transition: background 0.2s;
+  }
+
+  .hero-cta-secondary:hover { background: rgba(255,255,255,0.25); }
 
   .hero-zone { margin-top: 20px; font-size: 15px; color: rgba(255,255,255,0.75); font-weight: 700; letter-spacing: 1px; text-transform: uppercase; }
 
@@ -266,6 +302,8 @@
   .contact h2 { font-family: 'Fredoka One', cursive; font-size: 38px; color: #fff; margin-bottom: 16px; }
   .contact p { font-size: 18px; color: rgba(255,255,255,0.9); margin-bottom: 36px; }
 
+  .contact-btns { display: flex; gap: 16px; justify-content: center; flex-wrap: wrap; align-items: center; }
+
   .contact-numero {
     display: inline-block;
     background: #fff;
@@ -277,7 +315,24 @@
     text-decoration: none;
     box-shadow: 0 6px 24px rgba(0,0,0,0.15);
     transition: transform 0.2s;
+    white-space: nowrap;
   }
+
+  .contact-form-link {
+    display: inline-block;
+    background: rgba(255,255,255,0.15);
+    color: #fff;
+    font-family: 'Fredoka One', cursive;
+    font-size: 22px;
+    padding: 20px 36px;
+    border-radius: 60px;
+    text-decoration: none;
+    border: 2px solid rgba(255,255,255,0.6);
+    transition: background 0.2s;
+    white-space: nowrap;
+  }
+
+  .contact-form-link:hover { background: rgba(255,255,255,0.25); }
 
   .contact-note { margin-top: 20px; font-size: 15px; color: rgba(255,255,255,0.75); }
 
@@ -287,11 +342,14 @@
   @media (max-width: 650px) {
     header { padding: 14px 20px; }
     .logo { font-size: 22px; }
-    header a.cta-header { font-size: 14px; padding: 10px 18px; }
+    nav a.nav-link { display: none; }
+    nav a.cta-header { font-size: 14px; padding: 10px 18px; }
     .hero { padding: 60px 20px; }
+    .hero-btns { flex-direction: column; align-items: center; }
     .intro { flex-direction: column; text-align: center; gap: 30px; }
     .photo-wrap { margin: 0 auto; }
     .services-grid { grid-template-columns: 1fr; }
+    .contact-btns { flex-direction: column; }
   }
 </style>
 <!-- Google tag (gtag.js) -->
@@ -312,16 +370,23 @@
 <body>
 
 <header>
-  <a href="#" class="logo">Clic & Mémé</a>
-  <a href="tel:0667062185" class="cta-header">📞 Nous appeler</a>
+  <a href="/" class="logo">Clic & Mémé</a>
+  <nav>
+    <a href="/" class="nav-link active">Accueil</a>
+    <a href="/contact" class="nav-link">Contact</a>
+    <a href="tel:0667062185" class="cta-header">📞 Nous appeler</a>
+  </nav>
 </header>
 
 <section class="hero">
   <div class="hero-inner">
     <span class="hero-emoji">👵📱</span>
     <h1>Apprenez le numérique<br>chez vous, à votre rythme</h1>
-   <p>Loïc vient à domicile vous apprendre à maîtriser votre téléphone, tablette ou ordinateur.<br>Des cours simples, patients, sans jargon — pour que vous soyez vraiment autonome.</p>
-    <a href="#contact" class="hero-cta">📞 Appeler Loïc</a>
+    <p>Loïc vient à domicile vous apprendre à maîtriser votre téléphone, tablette ou ordinateur.<br>Des cours simples, patients, sans jargon — pour que vous soyez vraiment autonome.</p>
+    <div class="hero-btns">
+      <a href="tel:0667062185" class="hero-cta" onclick="gtagReportConversion()">📞 Appeler Loïc</a>
+      <a href="/contact" class="hero-cta-secondary">✉️ Envoyer un message</a>
+    </div>
     <p class="hero-zone">📍 Toulon & environs</p>
   </div>
 </section>
@@ -330,7 +395,7 @@
   <div class="photo-wrap"><img src="photo_loic.png" alt="Loïc"></div>
   <div class="intro-text">
     <h2>Bonjour, je m'appelle Loïc 👋</h2>
-   J'habite à Toulon et je propose des <strong>cours numériques personnalisés à domicile</strong> pour vous aider à utiliser votre téléphone, votre tablette ou votre ordinateur.<br><br>L'objectif c'est que vous ressortiez de chaque séance vraiment autonome.<br><br>J'ai vu mes grands-parents se sentir dépassés par la technologie, sans personne pour les guider simplement. Clic & Mémé est né de là.</p>
+    J'habite à Toulon et je propose des <strong>cours numériques personnalisés à domicile</strong> pour vous aider à utiliser votre téléphone, votre tablette ou votre ordinateur.<br><br>L'objectif c'est que vous ressortiez de chaque séance vraiment autonome.<br><br>J'ai vu mes grands-parents se sentir dépassés par la technologie, sans personne pour les guider simplement. Clic & Mémé est né de là.</p>
   </div>
 </section>
 
@@ -378,6 +443,7 @@
     <div class="pourquoi-item"><span class="icon">🤝</span><div><h4>Premier rendez-vous offert</h4><p>On se rencontre, je vous explique ce que je fais — sans engagement, sans frais.</p></div></div>
   </div>
 </section>
+
 <section class="pourquoi">
   <h2 class="section-title">Je me déplace <span>chez vous</span></h2>
   <div style="max-width:700px; margin:0 auto;">
@@ -400,18 +466,21 @@
     </div>
   </div>
 </section>
+
 <section class="contact" id="contact">
   <h2>On se rencontre ?</h2>
-  <p>Appelez-moi, c'est gratuit et sans engagement 😊</p>
-<a href="tel:0667062185" onclick="gtagReportConversion()" class="contact-numero" style="white-space:nowrap;">📞 06 67 06 21 85</a>
+  <p>Appelez-moi ou envoyez un message — c'est gratuit et sans engagement 😊</p>
+  <div class="contact-btns">
+    <a href="tel:0667062185" onclick="gtagReportConversion()" class="contact-numero">📞 06 67 06 21 85</a>
+    <a href="/contact" class="contact-form-link">✉️ Formulaire de contact</a>
+  </div>
   <p class="contact-note">Du lundi au dimanche · Je réponds rapidement</p>
   <p class="contact-note"><a href="mailto:clicetmeme@gmail.com" style="color: #fff; text-decoration: underline;">✉️ clicetmeme@gmail.com</a></p>
 </section>
 
 <footer>
   <p>© 2026 <span>Clic & Mémé</span> · Toulon & environs · Aide numérique à domicile</p>
-  <p style="margin-top:10px; font-size:15px;"><a href="tel:0667062185" onclick="gtagReportConversion()"
-                                                style="color:var(--orange-light); font-weight:700; text-decoration:none;">📞 06 67 06 21 85</a></p>
+  <p style="margin-top:10px; font-size:15px;"><a href="tel:0667062185" onclick="gtagReportConversion()" style="color:var(--orange-light); font-weight:700; text-decoration:none;">📞 06 67 06 21 85</a></p>
 </footer>
 
 </body>
