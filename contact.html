@@ -1,0 +1,601 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Contact — Clic & Mémé · Aide numérique à domicile Toulon</title>
+<meta name="description" content="Contactez Loïc pour une première visite gratuite à domicile. Aide numérique pour seniors à Toulon, Ollioules et environs.">
+<meta name="robots" content="index, follow">
+<link rel="canonical" href="https://www.clicetmeme.fr/contact">
+<link rel="icon" type="image/svg+xml" href="/favicon.svg">
+<link rel="alternate icon" href="/favicon.svg">
+<link href="https://fonts.googleapis.com/css2?family=Fredoka+One&family=Lato:wght@400;700;900&display=swap" rel="stylesheet">
+<style>
+  :root {
+    --orange: #3a8c5c;
+    --orange-light: #5cb87a;
+    --orange-pale: #f0f9f3;
+    --beige: #f4fbf6;
+    --text: #1e3d2f;
+    --text-light: #6a9478;
+  }
+
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+  html { scroll-behavior: smooth; }
+  body { font-family: 'Lato', sans-serif; background: var(--beige); color: var(--text); overflow-x: hidden; }
+
+  header {
+    background: #fff;
+    padding: 16px 40px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    box-shadow: 0 2px 12px rgba(0,0,0,0.06);
+    position: sticky;
+    top: 0;
+    z-index: 100;
+  }
+
+  .logo { font-family: 'Fredoka One', cursive; font-size: 28px; color: var(--orange); text-decoration: none; }
+
+  nav { display: flex; align-items: center; gap: 8px; }
+
+  nav a.nav-link {
+    font-size: 15px;
+    font-weight: 700;
+    color: var(--text-light);
+    text-decoration: none;
+    padding: 8px 16px;
+    border-radius: 50px;
+    transition: background 0.2s, color 0.2s;
+  }
+
+  nav a.nav-link:hover { background: var(--orange-pale); color: var(--orange); }
+  nav a.nav-link.active { color: var(--orange); }
+
+  nav a.cta-header {
+    background: var(--orange);
+    color: #fff;
+    padding: 12px 24px;
+    border-radius: 50px;
+    font-size: 16px;
+    font-weight: 700;
+    text-decoration: none;
+    transition: background 0.2s;
+    margin-left: 4px;
+  }
+
+  nav a.cta-header:hover { background: #2d7a4f; }
+
+  /* Hero mini */
+  .page-hero {
+    background: linear-gradient(135deg, #2d7a4f 0%, #5cb87a 100%);
+    padding: 50px 40px;
+    text-align: center;
+  }
+
+  .page-hero h1 {
+    font-family: 'Fredoka One', cursive;
+    font-size: clamp(30px, 5vw, 46px);
+    color: #fff;
+    margin-bottom: 10px;
+  }
+
+  .page-hero p {
+    font-size: 18px;
+    color: rgba(255,255,255,0.88);
+  }
+
+  /* Contenu */
+  .contact-page {
+    max-width: 960px;
+    margin: 60px auto;
+    padding: 0 24px;
+    display: grid;
+    grid-template-columns: 1fr 1.6fr;
+    gap: 40px;
+    align-items: start;
+  }
+
+  /* Bloc infos gauche */
+  .infos-card {
+    background: #fff;
+    border-radius: 16px;
+    padding: 28px 24px;
+    box-shadow: 0 4px 20px rgba(0,0,0,0.06);
+  }
+
+  .infos-card h2 {
+    font-family: 'Fredoka One', cursive;
+    font-size: 22px;
+    color: var(--orange);
+    margin-bottom: 20px;
+  }
+
+  .info-item {
+    display: flex;
+    align-items: flex-start;
+    gap: 14px;
+    margin-bottom: 18px;
+  }
+
+  .info-item .icon { font-size: 26px; flex-shrink: 0; margin-top: 2px; }
+
+  .info-item h4 {
+    font-family: 'Fredoka One', cursive;
+    font-size: 16px;
+    color: var(--text);
+    margin-bottom: 3px;
+  }
+
+  .info-item p, .info-item a {
+    font-size: 14px;
+    color: var(--text-light);
+    line-height: 1.5;
+    text-decoration: none;
+  }
+
+  .info-item a:hover { color: var(--orange); }
+
+  .badge-gratuit {
+    display: inline-block;
+    background: var(--orange-pale);
+    color: var(--orange);
+    font-size: 12px;
+    font-weight: 900;
+    padding: 5px 14px;
+    border-radius: 20px;
+    margin-top: 16px;
+    letter-spacing: 0.5px;
+  }
+
+  .btn-tel {
+    display: block;
+    background: var(--orange);
+    color: #fff;
+    font-family: 'Fredoka One', cursive;
+    font-size: 20px;
+    text-align: center;
+    padding: 16px;
+    border-radius: 50px;
+    text-decoration: none;
+    margin-top: 20px;
+    transition: background 0.2s;
+  }
+
+  .btn-tel:hover { background: #2d7a4f; }
+
+  /* Formulaire */
+  .form-card {
+    background: #fff;
+    border-radius: 16px;
+    padding: 32px 28px;
+    box-shadow: 0 4px 20px rgba(0,0,0,0.06);
+  }
+
+  .form-card h2 {
+    font-family: 'Fredoka One', cursive;
+    font-size: 24px;
+    color: var(--text);
+    margin-bottom: 6px;
+  }
+
+  .form-subtitle {
+    font-size: 14px;
+    color: var(--text-light);
+    margin-bottom: 24px;
+  }
+
+  /* Toggle profil */
+  .toggle-row { display: flex; gap: 8px; margin-bottom: 20px; }
+
+  .toggle-btn {
+    flex: 1;
+    padding: 10px 8px;
+    font-size: 13.5px;
+    border-radius: 50px;
+    border: 1.5px solid #ddd;
+    background: #fff;
+    cursor: pointer;
+    color: #555;
+    transition: all 0.15s;
+    font-family: 'Lato', sans-serif;
+    font-weight: 700;
+  }
+
+  .toggle-btn.active {
+    border-color: var(--orange);
+    background: var(--orange-pale);
+    color: var(--orange);
+  }
+
+  /* Bloc aidant */
+  .section-aidant {
+    background: var(--beige);
+    border-radius: 10px;
+    padding: 16px 18px;
+    margin-bottom: 16px;
+    display: none;
+  }
+
+  .section-aidant.visible { display: block; }
+
+  .section-label {
+    font-size: 11px;
+    font-weight: 900;
+    color: var(--text-light);
+    text-transform: uppercase;
+    letter-spacing: 0.8px;
+    margin-bottom: 12px;
+  }
+
+  /* Champs */
+  .field { margin-bottom: 14px; }
+
+  .field label {
+    display: block;
+    font-size: 13px;
+    color: var(--text-light);
+    margin-bottom: 5px;
+    font-weight: 700;
+  }
+
+  .field input,
+  .field select,
+  .field textarea {
+    width: 100%;
+    padding: 10px 13px;
+    border: 1.5px solid #dce8e1;
+    border-radius: 10px;
+    font-size: 14px;
+    font-family: 'Lato', sans-serif;
+    color: var(--text);
+    background: #fff;
+    transition: border-color 0.15s;
+    appearance: none;
+    -webkit-appearance: none;
+  }
+
+  .field input:focus,
+  .field select:focus,
+  .field textarea:focus {
+    outline: none;
+    border-color: var(--orange);
+    box-shadow: 0 0 0 3px rgba(58,140,92,0.1);
+  }
+
+  .field textarea { resize: vertical; min-height: 80px; }
+
+  .grid-2 { display: grid; grid-template-columns: 1fr 1fr; gap: 10px; }
+
+  /* Checkboxes */
+  .check-label {
+    font-size: 13px;
+    color: var(--text-light);
+    margin-bottom: 8px;
+    font-weight: 700;
+    display: block;
+  }
+
+  .checkbox-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 8px; margin-bottom: 14px; }
+
+  .checkbox-item {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    font-size: 13.5px;
+    color: var(--text);
+    cursor: pointer;
+  }
+
+  .checkbox-item input[type="checkbox"] {
+    width: 16px;
+    height: 16px;
+    accent-color: var(--orange);
+    cursor: pointer;
+    flex-shrink: 0;
+  }
+
+  /* RGPD */
+  .rgpd {
+    background: var(--beige);
+    border-radius: 8px;
+    padding: 10px 13px;
+    display: flex;
+    gap: 10px;
+    align-items: flex-start;
+    margin-bottom: 16px;
+  }
+
+  .rgpd p { font-size: 12px; color: var(--text-light); line-height: 1.5; }
+
+  /* Bouton */
+  .btn-submit {
+    width: 100%;
+    padding: 14px;
+    background: var(--orange);
+    color: #fff;
+    border: none;
+    border-radius: 50px;
+    font-size: 17px;
+    font-weight: 900;
+    font-family: 'Fredoka One', cursive;
+    cursor: pointer;
+    transition: background 0.15s, transform 0.1s;
+    letter-spacing: 0.3px;
+  }
+
+  .btn-submit:hover { background: #2d7a4f; }
+  .btn-submit:active { transform: scale(0.98); }
+  .btn-submit:disabled { background: #9ac3b3; cursor: not-allowed; }
+
+  .footer-note {
+    text-align: center;
+    font-size: 12px;
+    color: var(--text-light);
+    margin-top: 10px;
+  }
+
+  /* Messages */
+  .msg {
+    display: none;
+    padding: 12px 14px;
+    border-radius: 10px;
+    font-size: 14px;
+    margin-bottom: 14px;
+    font-weight: 700;
+  }
+
+  .msg.success { background: var(--orange-pale); color: var(--orange); border: 1.5px solid #b2dfc8; }
+  .msg.error { background: #fef2f2; color: #c0392b; border: 1.5px solid #f5c6c6; }
+
+  footer { background: #1e3d2f; color: rgba(255,255,255,0.5); text-align: center; padding: 24px; font-size: 13px; }
+  footer span { color: var(--orange-light); }
+
+  @media (max-width: 720px) {
+    .contact-page { grid-template-columns: 1fr; margin: 30px auto; }
+    nav a.nav-link { display: none; }
+    nav a.cta-header { font-size: 14px; padding: 10px 18px; }
+    header { padding: 14px 20px; }
+    .logo { font-size: 22px; }
+    .grid-2 { grid-template-columns: 1fr; }
+    .checkbox-grid { grid-template-columns: 1fr; }
+  }
+</style>
+<!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=AW-18206550386"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+  gtag('config', 'AW-18206550386');
+</script>
+</head>
+<body>
+
+<header>
+  <a href="/" class="logo">Clic & Mémé</a>
+  <nav>
+    <a href="/" class="nav-link">Accueil</a>
+    <a href="/contact" class="nav-link active">Contact</a>
+    <a href="tel:0667062185" class="cta-header">📞 Nous appeler</a>
+  </nav>
+</header>
+
+<div class="page-hero">
+  <h1>Contactez Loïc 👋</h1>
+  <p>Première visite gratuite · Réponse sous 24h · Zone Toulon / Ollioules</p>
+</div>
+
+<div class="contact-page">
+
+  <!-- Infos gauche -->
+  <div class="infos-card">
+    <h2>Comment me joindre</h2>
+
+    <div class="info-item">
+      <span class="icon">📞</span>
+      <div>
+        <h4>Par téléphone</h4>
+        <a href="tel:0667062185">06 67 06 21 85</a>
+        <p>Du lundi au dimanche</p>
+      </div>
+    </div>
+
+    <div class="info-item">
+      <span class="icon">✉️</span>
+      <div>
+        <h4>Par email</h4>
+        <a href="mailto:clicetmeme@gmail.com">clicetmeme@gmail.com</a>
+      </div>
+    </div>
+
+    <div class="info-item">
+      <span class="icon">📍</span>
+      <div>
+        <h4>Zone d'intervention</h4>
+        <p>Toulon · Ollioules · La Seyne · La Garde · Hyères · jusqu'à 30 km</p>
+      </div>
+    </div>
+
+    <div class="info-item">
+      <span class="icon">🤝</span>
+      <div>
+        <h4>Premier rendez-vous</h4>
+        <p>Gratuit, sans engagement, à votre domicile.</p>
+      </div>
+    </div>
+
+    <span class="badge-gratuit">✅ Première visite offerte</span>
+
+    <a href="tel:0667062185" class="btn-tel">📞 Appeler maintenant</a>
+  </div>
+
+  <!-- Formulaire droite -->
+  <div class="form-card">
+    <h2>Envoyer un message</h2>
+    <p class="form-subtitle">Loïc vous recontacte dans la journée.</p>
+
+    <div id="msg-success" class="msg success">
+      ✓ Message envoyé ! Loïc vous recontacte dans la journée.
+    </div>
+    <div id="msg-error" class="msg error">
+      Une erreur s'est produite. Appelez directement au 06 67 06 21 85.
+    </div>
+
+    <form id="contact-form" action="https://formspree.io/f/mrevwaed" method="POST">
+
+      <input type="hidden" name="profil" id="field-profil" value="" />
+
+      <!-- Toggle profil -->
+      <div class="toggle-row">
+        <button type="button" class="toggle-btn" id="btn-senior" onclick="setProfile('senior')">
+          👴 Je suis le senior
+        </button>
+        <button type="button" class="toggle-btn" id="btn-proche" onclick="setProfile('proche')">
+          🤝 Je contacte pour un proche
+        </button>
+      </div>
+
+      <!-- Bloc aidant -->
+      <div class="section-aidant" id="section-aidant">
+        <div class="section-label">Vos coordonnées (aidant)</div>
+        <div class="grid-2">
+          <div class="field">
+            <label for="aidant-prenom">Votre prénom</label>
+            <input type="text" id="aidant-prenom" name="aidant_prenom" placeholder="ex : Marie" />
+          </div>
+          <div class="field">
+            <label for="aidant-tel">Votre téléphone</label>
+            <input type="tel" id="aidant-tel" name="aidant_telephone" placeholder="06 XX XX XX XX" />
+          </div>
+        </div>
+        <div class="field">
+          <label for="lien">Lien avec le senior</label>
+          <select id="lien" name="lien_senior">
+            <option value="">-- Choisir --</option>
+            <option>Enfant / petit-enfant</option>
+            <option>Conjoint(e)</option>
+            <option>Ami(e) / voisin(e)</option>
+            <option>Professionnel de santé</option>
+            <option>Autre</option>
+          </select>
+        </div>
+      </div>
+
+      <!-- Infos senior -->
+      <div class="grid-2">
+        <div class="field">
+          <label for="prenom" id="label-prenom">Prénom</label>
+          <input type="text" id="prenom" name="prenom_senior" placeholder="ex : Jeanne" required />
+        </div>
+        <div class="field">
+          <label for="telephone" id="label-tel">Téléphone</label>
+          <input type="tel" id="telephone" name="telephone_senior" placeholder="06 XX XX XX XX" required />
+        </div>
+      </div>
+
+      <div class="field">
+        <label for="ville">Ville</label>
+        <input type="text" id="ville" name="ville" placeholder="ex : Ollioules, La Garde, Toulon…" />
+      </div>
+
+      <!-- Besoins -->
+      <label class="check-label">De quoi avez-vous besoin ?</label>
+      <div class="checkbox-grid">
+        <label class="checkbox-item">
+          <input type="checkbox" name="besoin[]" value="Smartphone / tablette" /> Smartphone / tablette
+        </label>
+        <label class="checkbox-item">
+          <input type="checkbox" name="besoin[]" value="Ordinateur" /> Ordinateur
+        </label>
+        <label class="checkbox-item">
+          <input type="checkbox" name="besoin[]" value="Internet / box" /> Internet / box
+        </label>
+        <label class="checkbox-item">
+          <input type="checkbox" name="besoin[]" value="Applications (photos, mails…)" /> Applications
+        </label>
+        <label class="checkbox-item">
+          <input type="checkbox" name="besoin[]" value="Démarches en ligne" /> Démarches en ligne
+        </label>
+        <label class="checkbox-item">
+          <input type="checkbox" name="besoin[]" value="Autre" /> Autre
+        </label>
+      </div>
+
+      <!-- Message -->
+      <div class="field">
+        <label for="message">Quelques mots (facultatif)</label>
+        <textarea id="message" name="message" placeholder="Décrivez la situation en quelques mots…"></textarea>
+      </div>
+
+      <!-- RGPD -->
+      <div class="rgpd">
+        <span style="font-size:18px; flex-shrink:0;">🔒</span>
+        <p>Vos données sont confidentielles et utilisées uniquement pour vous recontacter. Aucune transmission à des tiers.</p>
+      </div>
+
+      <button type="submit" class="btn-submit" id="btn-submit">
+        Envoyer ma demande →
+      </button>
+      <p class="footer-note">Loïc vous rappelle dans la journée · Première visite offerte</p>
+    </form>
+  </div>
+
+</div>
+
+<footer>
+  <p>© 2026 <span>Clic & Mémé</span> · Toulon & environs · Aide numérique à domicile</p>
+  <p style="margin-top:10px; font-size:15px;"><a href="tel:0667062185" style="color:var(--orange-light); font-weight:700; text-decoration:none;">📞 06 67 06 21 85</a></p>
+</footer>
+
+<script>
+  function setProfile(p) {
+    document.getElementById('field-profil').value = p;
+    document.getElementById('btn-senior').classList.toggle('active', p === 'senior');
+    document.getElementById('btn-proche').classList.toggle('active', p === 'proche');
+    document.getElementById('section-aidant').classList.toggle('visible', p === 'proche');
+    document.getElementById('label-prenom').textContent = 'Prénom du senior';
+    document.getElementById('label-tel').textContent = 'Téléphone du senior';
+  }
+
+  document.getElementById('contact-form').addEventListener('submit', async function(e) {
+    e.preventDefault();
+    const btn = document.getElementById('btn-submit');
+    const msgOk = document.getElementById('msg-success');
+    const msgErr = document.getElementById('msg-error');
+
+    btn.disabled = true;
+    btn.textContent = 'Envoi en cours…';
+    msgOk.style.display = 'none';
+    msgErr.style.display = 'none';
+
+    try {
+      const res = await fetch(this.action, {
+        method: 'POST',
+        body: new FormData(this),
+        headers: { 'Accept': 'application/json' }
+      });
+
+      if (res.ok) {
+        msgOk.style.display = 'block';
+        this.reset();
+        ['btn-senior','btn-proche'].forEach(id => document.getElementById(id).classList.remove('active'));
+        document.getElementById('section-aidant').classList.remove('visible');
+        document.getElementById('label-prenom').textContent = 'Prénom';
+        document.getElementById('label-tel').textContent = 'Téléphone';
+        btn.textContent = 'Message envoyé ✓';
+        window.scrollTo({ top: 0, behavior: 'smooth' });
+      } else {
+        throw new Error();
+      }
+    } catch {
+      msgErr.style.display = 'block';
+      btn.disabled = false;
+      btn.textContent = 'Envoyer ma demande →';
+    }
+  });
+</script>
+
+</body>
+</html>
