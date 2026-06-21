@@ -3,10 +3,10 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Contact — Clic & Mémé · Aide numérique à domicile Toulon</title>
-<meta name="description" content="Contactez Loïc pour une première visite gratuite à domicile. Aide numérique pour seniors à Toulon, Ollioules et environs.">
+<title>Contact — Numérique & Vous · Aide numérique à domicile Toulon</title>
+<meta name="description" content="Contactez Loïc pour une première visite gratuite à domicile. Aide numérique à Toulon, Ollioules et environs.">
 <meta name="robots" content="index, follow">
-<link rel="canonical" href="https://www.clicetmeme.fr/contact">
+<link rel="canonical" href="https://www.numeriquevous.fr/contact">
 <link rel="icon" type="image/svg+xml" href="/favicon.svg">
 <link rel="alternate icon" href="/favicon.svg">
 <link href="https://fonts.googleapis.com/css2?family=Fredoka+One&family=Lato:wght@400;700;900&display=swap" rel="stylesheet">
@@ -67,7 +67,6 @@
 
   nav a.cta-header:hover { background: #2d7a4f; }
 
-  /* Hero mini */
   .page-hero {
     background: linear-gradient(135deg, #2d7a4f 0%, #5cb87a 100%);
     padding: 50px 40px;
@@ -86,7 +85,6 @@
     color: rgba(255,255,255,0.88);
   }
 
-  /* Contenu */
   .contact-page {
     max-width: 960px;
     margin: 60px auto;
@@ -97,7 +95,6 @@
     align-items: start;
   }
 
-  /* Bloc infos gauche */
   .infos-card {
     background: #fff;
     border-radius: 16px;
@@ -165,7 +162,6 @@
 
   .btn-tel:hover { background: #2d7a4f; }
 
-  /* Formulaire */
   .form-card {
     background: #fff;
     border-radius: 16px;
@@ -186,7 +182,6 @@
     margin-bottom: 24px;
   }
 
-  /* Toggle profil */
   .toggle-row { display: flex; gap: 8px; margin-bottom: 20px; }
 
   .toggle-btn {
@@ -209,7 +204,6 @@
     color: var(--orange);
   }
 
-  /* Bloc aidant */
   .section-aidant {
     background: var(--beige);
     border-radius: 10px;
@@ -229,7 +223,6 @@
     margin-bottom: 12px;
   }
 
-  /* Champs */
   .field { margin-bottom: 14px; }
 
   .field label {
@@ -268,7 +261,6 @@
 
   .grid-2 { display: grid; grid-template-columns: 1fr 1fr; gap: 10px; }
 
-  /* Checkboxes */
   .check-label {
     font-size: 13px;
     color: var(--text-light);
@@ -296,7 +288,6 @@
     flex-shrink: 0;
   }
 
-  /* RGPD */
   .rgpd {
     background: var(--beige);
     border-radius: 8px;
@@ -309,7 +300,6 @@
 
   .rgpd p { font-size: 12px; color: var(--text-light); line-height: 1.5; }
 
-  /* Bouton */
   .btn-submit {
     width: 100%;
     padding: 14px;
@@ -336,7 +326,6 @@
     margin-top: 10px;
   }
 
-  /* Messages */
   .msg {
     display: none;
     padding: 12px 14px;
@@ -374,7 +363,7 @@
 <body>
 
 <header>
-  <a href="/" class="logo">Clic & Mémé</a>
+  <a href="/" class="logo">Numérique & Vous</a>
   <nav>
     <a href="/" class="nav-link">Accueil</a>
     <a href="/contact" class="nav-link active">Contact</a>
@@ -389,7 +378,6 @@
 
 <div class="contact-page">
 
-  <!-- Infos gauche -->
   <div class="infos-card">
     <h2>Comment me joindre</h2>
 
@@ -406,7 +394,7 @@
       <span class="icon">✉️</span>
       <div>
         <h4>Par email</h4>
-        <a href="mailto:clicetmeme@gmail.com">clicetmeme@gmail.com</a>
+        <a href="mailto:contact@numeriquevous.fr">contact@numeriquevous.fr</a>
       </div>
     </div>
 
@@ -431,7 +419,6 @@
     <a href="tel:0667062185" class="btn-tel">📞 Appeler maintenant</a>
   </div>
 
-  <!-- Formulaire droite -->
   <div class="form-card">
     <h2>Envoyer un message</h2>
     <p class="form-subtitle">Loïc vous recontacte dans la journée.</p>
@@ -447,7 +434,6 @@
 
       <input type="hidden" name="profil" id="field-profil" value="" />
 
-      <!-- Toggle profil -->
       <div class="toggle-row">
         <button type="button" class="toggle-btn" id="btn-senior" onclick="setProfile('senior')">
           👴 Je suis le senior
@@ -457,7 +443,6 @@
         </button>
       </div>
 
-      <!-- Bloc aidant -->
       <div class="section-aidant" id="section-aidant">
         <div class="section-label">Vos coordonnées (aidant)</div>
         <div class="grid-2">
@@ -483,7 +468,6 @@
         </div>
       </div>
 
-      <!-- Infos senior -->
       <div class="grid-2">
         <div class="field">
           <label for="prenom" id="label-prenom">Prénom</label>
@@ -500,7 +484,6 @@
         <input type="text" id="ville" name="ville" placeholder="ex : Ollioules, La Garde, Toulon…" />
       </div>
 
-      <!-- Besoins -->
       <label class="check-label">De quoi avez-vous besoin ?</label>
       <div class="checkbox-grid">
         <label class="checkbox-item">
@@ -523,13 +506,11 @@
         </label>
       </div>
 
-      <!-- Message -->
       <div class="field">
         <label for="message">Quelques mots (facultatif)</label>
         <textarea id="message" name="message" placeholder="Décrivez la situation en quelques mots…"></textarea>
       </div>
 
-      <!-- RGPD -->
       <div class="rgpd">
         <span style="font-size:18px; flex-shrink:0;">🔒</span>
         <p>Vos données sont confidentielles et utilisées uniquement pour vous recontacter. Aucune transmission à des tiers.</p>
@@ -545,7 +526,7 @@
 </div>
 
 <footer>
-  <p>© 2026 <span>Clic & Mémé</span> · Toulon & environs · Aide numérique à domicile</p>
+  <p>© 2026 <span>Numérique & Vous</span> · Toulon & environs · Aide numérique à domicile</p>
   <p style="margin-top:10px; font-size:15px;"><a href="tel:0667062185" style="color:var(--orange-light); font-weight:700; text-decoration:none;">📞 06 67 06 21 85</a></p>
 </footer>
 
