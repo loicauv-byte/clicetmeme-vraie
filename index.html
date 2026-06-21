@@ -359,12 +359,24 @@
   function gtag(){dataLayer.push(arguments);}
   gtag('js', new Date());
   gtag('config', 'AW-18206550386');
+</script>
 
-  function gtagReportConversion() {
-    gtag('event', 'conversion', {
-      'send_to': 'AW-18206550386/ZnG8CK2z0LccEPLSx-lD'
-    });
-  }
+<!-- Event snippet Appel Direct -->
+<script>
+function gtag_report_conversion(url) {
+  var callback = function () {
+    if (typeof(url) != 'undefined') {
+      window.location = url;
+    }
+  };
+  gtag('event', 'conversion', {
+      'send_to': 'AW-18206550386/CUkjCJmM9sIcEPLSx-lD',
+      'value': 50.0,
+      'currency': 'EUR',
+      'event_callback': callback
+  });
+  return false;
+}
 </script>
 </head>
 <body>
@@ -374,7 +386,7 @@
   <nav>
     <a href="/" class="nav-link active">Accueil</a>
     <a href="/contact" class="nav-link">Contact</a>
-    <a href="tel:0667062185" class="cta-header">📞 Nous appeler</a>
+    <a href="tel:0667062185" onclick="return gtag_report_conversion('tel:0667062185');" class="cta-header">📞 Nous appeler</a>
   </nav>
 </header>
 
@@ -384,7 +396,7 @@
     <h1>Apprenez le numérique<br>chez vous, à votre rythme</h1>
     <p>Loïc vient à domicile vous apprendre à maîtriser votre téléphone, tablette ou ordinateur.<br>Des cours simples, patients, sans jargon — pour que vous soyez vraiment autonome.</p>
     <div class="hero-btns">
-      <a href="tel:0667062185" class="hero-cta" onclick="gtagReportConversion()">📞 Appeler Loïc</a>
+      <a href="tel:0667062185" onclick="return gtag_report_conversion('tel:0667062185');" class="hero-cta">📞 Appeler Loïc</a>
       <a href="/contact" class="hero-cta-secondary">✉️ Envoyer un message</a>
     </div>
     <p class="hero-zone">📍 Toulon & environs</p>
@@ -420,7 +432,7 @@
       <div class="tarif-desc">1 heure à domicile<br>Sans engagement</div>
     </div>
     <div class="tarif-card featured">
-      <div class="badge-popular">⭐ Le plus choisi</div>
+      <div class="badge-popular">⭐ Recommandé</div>
       <div class="tarif-name">Suivi Essentiel</div>
       <div class="tarif-price">40€<span>/mois</span></div>
       <div class="tarif-desc">1 séance par mois<br>+ hotline téléphonique<br><strong>Économisez 10€ par séance</strong></div>
@@ -462,7 +474,7 @@
       </div>
     </div>
     <div style="text-align:center; margin-top:32px;">
-      <a href="tel:0667062185" onclick="gtagReportConversion()" style="background:var(--orange);color:#fff;padding:14px 32px;border-radius:50px;font-size:16px;font-weight:700;text-decoration:none;">📞 Vérifier si je me déplace chez vous</a>
+      <a href="tel:0667062185" onclick="return gtag_report_conversion('tel:0667062185');" style="background:var(--orange);color:#fff;padding:14px 32px;border-radius:50px;font-size:16px;font-weight:700;text-decoration:none;">📞 Vérifier si je me déplace chez vous</a>
     </div>
   </div>
 </section>
@@ -471,7 +483,7 @@
   <h2>On se rencontre ?</h2>
   <p>Appelez-moi ou envoyez un message — c'est gratuit et sans engagement 😊</p>
   <div class="contact-btns">
-    <a href="tel:0667062185" onclick="gtagReportConversion()" class="contact-numero">📞 06 67 06 21 85</a>
+    <a href="tel:0667062185" onclick="return gtag_report_conversion('tel:0667062185');" class="contact-numero">📞 06 67 06 21 85</a>
     <a href="/contact" class="contact-form-link">✉️ Formulaire de contact</a>
   </div>
   <p class="contact-note">Du lundi au dimanche · Je réponds rapidement</p>
@@ -480,7 +492,7 @@
 
 <footer>
   <p>© 2026 <span>Clic & Mémé</span> · Toulon & environs · Aide numérique à domicile</p>
-  <p style="margin-top:10px; font-size:15px;"><a href="tel:0667062185" onclick="gtagReportConversion()" style="color:var(--orange-light); font-weight:700; text-decoration:none;">📞 06 67 06 21 85</a></p>
+  <p style="margin-top:10px; font-size:15px;"><a href="tel:0667062185" onclick="return gtag_report_conversion('tel:0667062185');" style="color:var(--orange-light); font-weight:700; text-decoration:none;">📞 06 67 06 21 85</a></p>
 </footer>
 
 </body>
