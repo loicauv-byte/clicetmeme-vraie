@@ -182,47 +182,6 @@
     margin-bottom: 24px;
   }
 
-  .toggle-row { display: flex; gap: 8px; margin-bottom: 20px; }
-
-  .toggle-btn {
-    flex: 1;
-    padding: 10px 8px;
-    font-size: 13.5px;
-    border-radius: 50px;
-    border: 1.5px solid #ddd;
-    background: #fff;
-    cursor: pointer;
-    color: #555;
-    transition: all 0.15s;
-    font-family: 'Lato', sans-serif;
-    font-weight: 700;
-  }
-
-  .toggle-btn.active {
-    border-color: var(--orange);
-    background: var(--orange-pale);
-    color: var(--orange);
-  }
-
-  .section-aidant {
-    background: var(--beige);
-    border-radius: 10px;
-    padding: 16px 18px;
-    margin-bottom: 16px;
-    display: none;
-  }
-
-  .section-aidant.visible { display: block; }
-
-  .section-label {
-    font-size: 11px;
-    font-weight: 900;
-    color: var(--text-light);
-    text-transform: uppercase;
-    letter-spacing: 0.8px;
-    margin-bottom: 12px;
-  }
-
   .field { margin-bottom: 14px; }
 
   .field label {
@@ -432,50 +391,14 @@
 
     <form id="contact-form" action="https://formspree.io/f/mrevwaed" method="POST">
 
-      <input type="hidden" name="profil" id="field-profil" value="" />
-
-      <div class="toggle-row">
-        <button type="button" class="toggle-btn" id="btn-senior" onclick="setProfile('senior')">
-          👴 Je suis le senior
-        </button>
-        <button type="button" class="toggle-btn" id="btn-proche" onclick="setProfile('proche')">
-          🤝 Je contacte pour un proche
-        </button>
-      </div>
-
-      <div class="section-aidant" id="section-aidant">
-        <div class="section-label">Vos coordonnées (aidant)</div>
-        <div class="grid-2">
-          <div class="field">
-            <label for="aidant-prenom">Votre prénom</label>
-            <input type="text" id="aidant-prenom" name="aidant_prenom" placeholder="ex : Marie" />
-          </div>
-          <div class="field">
-            <label for="aidant-tel">Votre téléphone</label>
-            <input type="tel" id="aidant-tel" name="aidant_telephone" placeholder="06 XX XX XX XX" />
-          </div>
-        </div>
-        <div class="field">
-          <label for="lien">Lien avec le senior</label>
-          <select id="lien" name="lien_senior">
-            <option value="">-- Choisir --</option>
-            <option>Enfant / petit-enfant</option>
-            <option>Conjoint(e)</option>
-            <option>Ami(e) / voisin(e)</option>
-            <option>Professionnel de santé</option>
-            <option>Autre</option>
-          </select>
-        </div>
-      </div>
-
       <div class="grid-2">
         <div class="field">
-          <label for="prenom" id="label-prenom">Prénom</label>
-          <input type="text" id="prenom" name="prenom_senior" placeholder="ex : Jeanne" required />
+          <label for="prenom">Prénom</label>
+          <input type="text" id="prenom" name="prenom" placeholder="ex : Jeanne" required />
         </div>
         <div class="field">
-          <label for="telephone" id="label-tel">Téléphone</label>
-          <input type="tel" id="telephone" name="telephone_senior" placeholder="06 XX XX XX XX" required />
+          <label for="telephone">Téléphone</label>
+          <input type="tel" id="telephone" name="telephone" placeholder="06 XX XX XX XX" required />
         </div>
       </div>
 
@@ -531,15 +454,6 @@
 </footer>
 
 <script>
-  function setProfile(p) {
-    document.getElementById('field-profil').value = p;
-    document.getElementById('btn-senior').classList.toggle('active', p === 'senior');
-    document.getElementById('btn-proche').classList.toggle('active', p === 'proche');
-    document.getElementById('section-aidant').classList.toggle('visible', p === 'proche');
-    document.getElementById('label-prenom').textContent = 'Prénom du senior';
-    document.getElementById('label-tel').textContent = 'Téléphone du senior';
-  }
-
   document.getElementById('contact-form').addEventListener('submit', async function(e) {
     e.preventDefault();
     const btn = document.getElementById('btn-submit');
@@ -561,10 +475,6 @@
       if (res.ok) {
         msgOk.style.display = 'block';
         this.reset();
-        ['btn-senior','btn-proche'].forEach(id => document.getElementById(id).classList.remove('active'));
-        document.getElementById('section-aidant').classList.remove('visible');
-        document.getElementById('label-prenom').textContent = 'Prénom';
-        document.getElementById('label-tel').textContent = 'Téléphone';
         btn.textContent = 'Message envoyé ✓';
         window.scrollTo({ top: 0, behavior: 'smooth' });
       } else {
