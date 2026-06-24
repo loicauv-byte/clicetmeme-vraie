@@ -9,15 +9,16 @@
 <link rel="canonical" href="https://www.numeriquevous.fr/contact">
 <link rel="icon" type="image/svg+xml" href="/favicon.svg">
 <link rel="alternate icon" href="/favicon.svg">
-<link href="https://fonts.googleapis.com/css2?family=Fredoka+One&family=Lato:wght@400;700;900&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700;800;900&family=Lato:wght@400;700;900&display=swap" rel="stylesheet">
 <style>
   :root {
-    --orange: #3a8c5c;
-    --orange-light: #5cb87a;
-    --orange-pale: #f0f9f3;
-    --beige: #f4fbf6;
-    --text: #1e3d2f;
-    --text-light: #6a9478;
+    --green-dark:  #1e6b3c;
+    --green-mid:   #2d7a4f;
+    --green-light: #4aa96c;
+    --green-pale:  #eef7f1;
+    --beige:       #f4fbf6;
+    --text:        #1a3326;
+    --text-light:  #5a7d6a;
   }
 
   * { margin: 0; padding: 0; box-sizing: border-box; }
@@ -26,64 +27,32 @@
 
   header {
     background: #fff;
-    padding: 16px 40px;
+    padding: 12px 40px;
     display: flex;
     align-items: center;
     justify-content: space-between;
-    box-shadow: 0 2px 12px rgba(0,0,0,0.06);
+    box-shadow: 0 2px 12px rgba(0,0,0,0.07);
     position: sticky;
     top: 0;
     z-index: 100;
   }
-
-  .logo { font-family: 'Fredoka One', cursive; font-size: 28px; color: var(--orange); text-decoration: none; }
+  .logo-link { display: flex; align-items: center; text-decoration: none; }
+  .logo-svg { height: 52px; width: auto; }
 
   nav { display: flex; align-items: center; gap: 8px; }
-
-  nav a.nav-link {
-    font-size: 15px;
-    font-weight: 700;
-    color: var(--text-light);
-    text-decoration: none;
-    padding: 8px 16px;
-    border-radius: 50px;
-    transition: background 0.2s, color 0.2s;
-  }
-
-  nav a.nav-link:hover { background: var(--orange-pale); color: var(--orange); }
-  nav a.nav-link.active { color: var(--orange); }
-
-  nav a.cta-header {
-    background: var(--orange);
-    color: #fff;
-    padding: 12px 24px;
-    border-radius: 50px;
-    font-size: 16px;
-    font-weight: 700;
-    text-decoration: none;
-    transition: background 0.2s;
-    margin-left: 4px;
-  }
-
-  nav a.cta-header:hover { background: #2d7a4f; }
+  nav a.nav-link { font-size: 15px; font-weight: 700; color: var(--text-light); text-decoration: none; padding: 8px 16px; border-radius: 50px; transition: background 0.2s, color 0.2s; }
+  nav a.nav-link:hover { background: var(--green-pale); color: var(--green-dark); }
+  nav a.nav-link.active { color: var(--green-dark); }
+  nav a.cta-header { background: var(--green-dark); color: #fff; padding: 11px 22px; border-radius: 50px; font-size: 15px; font-weight: 700; text-decoration: none; transition: background 0.2s; margin-left: 4px; font-family: 'Montserrat', sans-serif; }
+  nav a.cta-header:hover { background: var(--green-mid); }
 
   .page-hero {
-    background: linear-gradient(135deg, #2d7a4f 0%, #5cb87a 100%);
+    background: linear-gradient(135deg, var(--green-dark) 0%, var(--green-light) 100%);
     padding: 50px 40px;
     text-align: center;
   }
-
-  .page-hero h1 {
-    font-family: 'Fredoka One', cursive;
-    font-size: clamp(30px, 5vw, 46px);
-    color: #fff;
-    margin-bottom: 10px;
-  }
-
-  .page-hero p {
-    font-size: 18px;
-    color: rgba(255,255,255,0.88);
-  }
+  .page-hero h1 { font-family: 'Montserrat', sans-serif; font-weight: 800; font-size: clamp(28px, 5vw, 44px); color: #fff; margin-bottom: 10px; letter-spacing: -0.5px; }
+  .page-hero p { font-size: 18px; color: rgba(255,255,255,0.88); }
 
   .contact-page {
     max-width: 960px;
@@ -101,57 +70,34 @@
     padding: 28px 24px;
     box-shadow: 0 4px 20px rgba(0,0,0,0.06);
   }
+  .infos-card h2 { font-family: 'Montserrat', sans-serif; font-weight: 800; font-size: 20px; color: var(--green-dark); margin-bottom: 20px; }
 
-  .infos-card h2 {
-    font-family: 'Fredoka One', cursive;
-    font-size: 22px;
-    color: var(--orange);
-    margin-bottom: 20px;
-  }
-
-  .info-item {
-    display: flex;
-    align-items: flex-start;
-    gap: 14px;
-    margin-bottom: 18px;
-  }
-
-  .info-item .icon { font-size: 26px; flex-shrink: 0; margin-top: 2px; }
-
-  .info-item h4 {
-    font-family: 'Fredoka One', cursive;
-    font-size: 16px;
-    color: var(--text);
-    margin-bottom: 3px;
-  }
-
-  .info-item p, .info-item a {
-    font-size: 14px;
-    color: var(--text-light);
-    line-height: 1.5;
-    text-decoration: none;
-  }
-
-  .info-item a:hover { color: var(--orange); }
+  .info-item { display: flex; align-items: flex-start; gap: 14px; margin-bottom: 18px; }
+  .info-item .icon { font-size: 24px; flex-shrink: 0; margin-top: 2px; }
+  .info-item h4 { font-family: 'Montserrat', sans-serif; font-weight: 700; font-size: 14px; color: var(--text); margin-bottom: 3px; }
+  .info-item p, .info-item a { font-size: 14px; color: var(--text-light); line-height: 1.5; text-decoration: none; }
+  .info-item a:hover { color: var(--green-dark); }
 
   .badge-gratuit {
     display: inline-block;
-    background: var(--orange-pale);
-    color: var(--orange);
+    background: var(--green-pale);
+    color: var(--green-dark);
     font-size: 12px;
-    font-weight: 900;
+    font-weight: 700;
+    font-family: 'Montserrat', sans-serif;
     padding: 5px 14px;
     border-radius: 20px;
     margin-top: 16px;
-    letter-spacing: 0.5px;
+    letter-spacing: 0.3px;
   }
 
   .btn-tel {
     display: block;
-    background: var(--orange);
+    background: var(--green-dark);
     color: #fff;
-    font-family: 'Fredoka One', cursive;
-    font-size: 20px;
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 800;
+    font-size: 18px;
     text-align: center;
     padding: 16px;
     border-radius: 50px;
@@ -159,8 +105,7 @@
     margin-top: 20px;
     transition: background 0.2s;
   }
-
-  .btn-tel:hover { background: #2d7a4f; }
+  .btn-tel:hover { background: var(--green-mid); }
 
   .form-card {
     background: #fff;
@@ -168,33 +113,12 @@
     padding: 32px 28px;
     box-shadow: 0 4px 20px rgba(0,0,0,0.06);
   }
-
-  .form-card h2 {
-    font-family: 'Fredoka One', cursive;
-    font-size: 24px;
-    color: var(--text);
-    margin-bottom: 6px;
-  }
-
-  .form-subtitle {
-    font-size: 14px;
-    color: var(--text-light);
-    margin-bottom: 24px;
-  }
+  .form-card h2 { font-family: 'Montserrat', sans-serif; font-weight: 800; font-size: 22px; color: var(--text); margin-bottom: 6px; }
+  .form-subtitle { font-size: 14px; color: var(--text-light); margin-bottom: 24px; }
 
   .field { margin-bottom: 14px; }
-
-  .field label {
-    display: block;
-    font-size: 13px;
-    color: var(--text-light);
-    margin-bottom: 5px;
-    font-weight: 700;
-  }
-
-  .field input,
-  .field select,
-  .field textarea {
+  .field label { display: block; font-size: 13px; color: var(--text-light); margin-bottom: 5px; font-weight: 700; }
+  .field input, .field select, .field textarea {
     width: 100%;
     padding: 10px 13px;
     border: 1.5px solid #dce8e1;
@@ -207,110 +131,59 @@
     appearance: none;
     -webkit-appearance: none;
   }
-
-  .field input:focus,
-  .field select:focus,
-  .field textarea:focus {
+  .field input:focus, .field select:focus, .field textarea:focus {
     outline: none;
-    border-color: var(--orange);
-    box-shadow: 0 0 0 3px rgba(58,140,92,0.1);
+    border-color: var(--green-dark);
+    box-shadow: 0 0 0 3px rgba(30,107,60,0.1);
   }
-
   .field textarea { resize: vertical; min-height: 80px; }
 
   .grid-2 { display: grid; grid-template-columns: 1fr 1fr; gap: 10px; }
 
-  .check-label {
-    font-size: 13px;
-    color: var(--text-light);
-    margin-bottom: 8px;
-    font-weight: 700;
-    display: block;
-  }
-
+  .check-label { font-size: 13px; color: var(--text-light); margin-bottom: 8px; font-weight: 700; display: block; }
   .checkbox-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 8px; margin-bottom: 14px; }
+  .checkbox-item { display: flex; align-items: center; gap: 8px; font-size: 13.5px; color: var(--text); cursor: pointer; }
+  .checkbox-item input[type="checkbox"] { width: 16px; height: 16px; accent-color: var(--green-dark); cursor: pointer; flex-shrink: 0; }
 
-  .checkbox-item {
-    display: flex;
-    align-items: center;
-    gap: 8px;
-    font-size: 13.5px;
-    color: var(--text);
-    cursor: pointer;
-  }
-
-  .checkbox-item input[type="checkbox"] {
-    width: 16px;
-    height: 16px;
-    accent-color: var(--orange);
-    cursor: pointer;
-    flex-shrink: 0;
-  }
-
-  .rgpd {
-    background: var(--beige);
-    border-radius: 8px;
-    padding: 10px 13px;
-    display: flex;
-    gap: 10px;
-    align-items: flex-start;
-    margin-bottom: 16px;
-  }
-
+  .rgpd { background: var(--beige); border-radius: 8px; padding: 10px 13px; display: flex; gap: 10px; align-items: flex-start; margin-bottom: 16px; }
   .rgpd p { font-size: 12px; color: var(--text-light); line-height: 1.5; }
 
   .btn-submit {
     width: 100%;
     padding: 14px;
-    background: var(--orange);
+    background: var(--green-dark);
     color: #fff;
     border: none;
     border-radius: 50px;
     font-size: 17px;
-    font-weight: 900;
-    font-family: 'Fredoka One', cursive;
+    font-weight: 800;
+    font-family: 'Montserrat', sans-serif;
     cursor: pointer;
     transition: background 0.15s, transform 0.1s;
-    letter-spacing: 0.3px;
   }
-
-  .btn-submit:hover { background: #2d7a4f; }
+  .btn-submit:hover { background: var(--green-mid); }
   .btn-submit:active { transform: scale(0.98); }
   .btn-submit:disabled { background: #9ac3b3; cursor: not-allowed; }
 
-  .footer-note {
-    text-align: center;
-    font-size: 12px;
-    color: var(--text-light);
-    margin-top: 10px;
-  }
+  .footer-note { text-align: center; font-size: 12px; color: var(--text-light); margin-top: 10px; }
 
-  .msg {
-    display: none;
-    padding: 12px 14px;
-    border-radius: 10px;
-    font-size: 14px;
-    margin-bottom: 14px;
-    font-weight: 700;
-  }
-
-  .msg.success { background: var(--orange-pale); color: var(--orange); border: 1.5px solid #b2dfc8; }
+  .msg { display: none; padding: 12px 14px; border-radius: 10px; font-size: 14px; margin-bottom: 14px; font-weight: 700; }
+  .msg.success { background: var(--green-pale); color: var(--green-dark); border: 1.5px solid #b2dfc8; }
   .msg.error { background: #fef2f2; color: #c0392b; border: 1.5px solid #f5c6c6; }
 
-  footer { background: #1e3d2f; color: rgba(255,255,255,0.5); text-align: center; padding: 24px; font-size: 13px; }
-  footer span { color: var(--orange-light); }
+  footer { background: #1a3326; color: rgba(255,255,255,0.5); text-align: center; padding: 24px; font-size: 13px; }
+  footer span { color: var(--green-light); }
 
   @media (max-width: 720px) {
     .contact-page { grid-template-columns: 1fr; margin: 30px auto; }
     nav a.nav-link { display: none; }
-    nav a.cta-header { font-size: 14px; padding: 10px 18px; }
-    header { padding: 14px 20px; }
-    .logo { font-size: 22px; }
+    nav a.cta-header { font-size: 13px; padding: 10px 16px; }
+    header { padding: 12px 20px; }
+    .logo-svg { height: 40px; }
     .grid-2 { grid-template-columns: 1fr; }
     .checkbox-grid { grid-template-columns: 1fr; }
   }
 </style>
-<!-- Google tag (gtag.js) -->
 <script async src="https://www.googletagmanager.com/gtag/js?id=AW-18206550386"></script>
 <script>
   window.dataLayer = window.dataLayer || [];
@@ -322,16 +195,18 @@
 <body>
 
 <header>
-  <a href="/" class="logo">Numérique & Vous</a>
+  <a href="/" class="logo-link" aria-label="Numérique & Vous — Accueil">
+    <img src="/logo.png" alt="Numérique & Vous" class="logo-svg">
+  </a>
   <nav>
     <a href="/" class="nav-link">Accueil</a>
     <a href="/contact" class="nav-link active">Contact</a>
-    <a href="tel:0667062185" class="cta-header">📞 Nous appeler</a>
+    <a href="tel:0667062185" class="cta-header">Nous appeler</a>
   </nav>
 </header>
 
 <div class="page-hero">
-  <h1>Contactez Loïc 👋</h1>
+  <h1>Contactez Loïc</h1>
   <p>Diagnostic offert — 30 min pour découvrir vos besoins · Réponse sous 24h · Zone Toulon / Ollioules</p>
 </div>
 
@@ -373,9 +248,9 @@
       </div>
     </div>
 
-    <span class="badge-gratuit">✅ Diagnostic offert — 30 min pour découvrir vos besoins</span>
+    <span class="badge-gratuit">Diagnostic offert — 30 min pour découvrir vos besoins</span>
 
-    <a href="tel:0667062185" class="btn-tel">📞 Appeler maintenant</a>
+    <a href="tel:0667062185" class="btn-tel">Appeler maintenant</a>
   </div>
 
   <div class="form-card">
@@ -383,7 +258,7 @@
     <p class="form-subtitle">Loïc vous recontacte dans la journée.</p>
 
     <div id="msg-success" class="msg success">
-      ✓ Message envoyé ! Loïc vous recontacte dans la journée.
+      Message envoyé ! Loïc vous recontacte dans la journée.
     </div>
     <div id="msg-error" class="msg error">
       Une erreur s'est produite. Appelez directement au 06 67 06 21 85.
@@ -409,24 +284,12 @@
 
       <label class="check-label">De quoi avez-vous besoin ?</label>
       <div class="checkbox-grid">
-        <label class="checkbox-item">
-          <input type="checkbox" name="besoin[]" value="Smartphone / tablette" /> Smartphone / tablette
-        </label>
-        <label class="checkbox-item">
-          <input type="checkbox" name="besoin[]" value="Ordinateur" /> Ordinateur
-        </label>
-        <label class="checkbox-item">
-          <input type="checkbox" name="besoin[]" value="Internet / box" /> Internet / box
-        </label>
-        <label class="checkbox-item">
-          <input type="checkbox" name="besoin[]" value="Applications (photos, mails…)" /> Applications
-        </label>
-        <label class="checkbox-item">
-          <input type="checkbox" name="besoin[]" value="Démarches en ligne" /> Démarches en ligne
-        </label>
-        <label class="checkbox-item">
-          <input type="checkbox" name="besoin[]" value="Autre" /> Autre
-        </label>
+        <label class="checkbox-item"><input type="checkbox" name="besoin[]" value="Smartphone / tablette" /> Smartphone / tablette</label>
+        <label class="checkbox-item"><input type="checkbox" name="besoin[]" value="Ordinateur" /> Ordinateur</label>
+        <label class="checkbox-item"><input type="checkbox" name="besoin[]" value="Internet / box" /> Internet / box</label>
+        <label class="checkbox-item"><input type="checkbox" name="besoin[]" value="Applications (photos, mails…)" /> Applications</label>
+        <label class="checkbox-item"><input type="checkbox" name="besoin[]" value="Démarches en ligne" /> Démarches en ligne</label>
+        <label class="checkbox-item"><input type="checkbox" name="besoin[]" value="Autre" /> Autre</label>
       </div>
 
       <div class="field">
@@ -449,8 +312,8 @@
 </div>
 
 <footer>
-  <p>© 2026 <span>Numérique & Vous</span> · Toulon & environs · Aide numérique à domicile</p>
-  <p style="margin-top:10px; font-size:15px;"><a href="tel:0667062185" style="color:var(--orange-light); font-weight:700; text-decoration:none;">📞 06 67 06 21 85</a></p>
+  <p>© 2026 <span>Numérique & Vous</span> · Toulon &amp; environs · Aide numérique à domicile</p>
+  <p style="margin-top:10px; font-size:15px;"><a href="tel:0667062185" style="color:var(--green-light); font-weight:700; text-decoration:none;">06 67 06 21 85</a></p>
 </footer>
 
 <script>
