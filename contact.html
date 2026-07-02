@@ -336,10 +336,7 @@
       });
 
       if (res.ok) {
-        msgOk.style.display = 'block';
-        this.reset();
-        btn.textContent = 'Message envoyé ✓';
-        window.scrollTo({ top: 0, behavior: 'smooth' });
+        window.location.href = '/merci.html';
       } else {
         throw new Error();
       }
