@@ -314,6 +314,23 @@ h2 .hl::after{content:'';position:absolute;left:-2%;bottom:6%;width:104%;height:
 .testimonial cite{display:block;margin-top:26px;font-style:normal;font-weight:700;font-size:.95rem;color:var(--vert)}
 .testimonial cite span{display:block;font-weight:500;color:#5b7263;font-size:.85rem;margin-top:4px}
 
+/* ---------- Carrousel avis ---------- */
+.carousel-wrap{position:relative;padding:0 0 50px}
+.carousel-track{display:flex;gap:24px;transition:transform .55s cubic-bezier(.22,1,.36,1);will-change:transform}
+.tcard{min-width:100%;background:var(--blanc);border-radius:var(--radius);padding:clamp(28px,4vw,44px);box-shadow:0 10px 40px rgba(20,61,38,.1);display:flex;flex-direction:column;gap:18px;position:relative}
+.tcard-stars{color:var(--miel);font-size:1.3rem;letter-spacing:3px}
+.tcard blockquote{font-family:'Fraunces',serif;font-size:clamp(1.15rem,2.4vw,1.55rem);font-weight:600;line-height:1.4;color:var(--encre)}
+.tcard blockquote::before{content:'"';color:var(--miel);font-size:1.6em;line-height:0;vertical-align:-.35em;margin-right:6px}
+.tcard cite{font-style:normal;font-weight:700;font-size:.95rem;color:var(--vert);margin-top:auto}
+.tcard cite span{display:block;font-weight:500;color:#5b7263;font-size:.82rem;margin-top:4px}
+.tcard-badge{position:absolute;top:24px;right:24px;background:#4285F4;color:#fff;font-size:.72rem;font-weight:800;letter-spacing:.08em;text-transform:uppercase;padding:5px 12px;border-radius:100px}
+.carousel-nav{display:flex;align-items:center;justify-content:center;gap:18px;margin-top:32px}
+.cnav{width:46px;height:46px;border-radius:50%;border:2px solid var(--vert);background:none;cursor:pointer;font-size:1.1rem;color:var(--vert);display:flex;align-items:center;justify-content:center;transition:background .3s,color .3s,transform .3s}
+.cnav:hover{background:var(--vert);color:#fff;transform:scale(1.08)}
+.cdots{display:flex;gap:8px}
+.cdot{width:10px;height:10px;border-radius:50%;background:rgba(20,61,38,.2);border:none;cursor:pointer;padding:0;transition:background .3s,transform .3s}
+.cdot.active{background:var(--vert);transform:scale(1.3)}
+
 /* ---------- FAQ ---------- */
 .faq{max-width:820px;margin:0 auto;width:100%}
 .faq-item{border-bottom:1.5px solid rgba(20,61,38,.12)}
@@ -481,7 +498,7 @@ a:focus-visible,button:focus-visible,input:focus-visible,textarea:focus-visible{
 <section class="steps" id="methode">
   <div class="section-head reveal">
     <span class="eyebrow">La méthode</span>
-    <h2>Trois étapes, zéro jargon.</h2>
+    <h2>Trois étapes, tout en simplicité.</h2>
     <p class="lead">Un cadre simple qui rassure et qui fait progresser, séance après séance.</p>
   </div>
   <div class="steps-grid">
@@ -516,7 +533,7 @@ a:focus-visible,button:focus-visible,input:focus-visible,textarea:focus-visible{
       <p class="lead">Je m'appelle Loïc, je suis basé à Ollioules. J'ai créé Numérique &amp; Vous avec une conviction simple : tout le monde peut apprendre le numérique quand on prend le temps d'expliquer avec les bons mots.</p>
       <ul class="about-points">
         <li>Toujours la même personne à chaque séance — vous me connaissez, je vous connais</li>
-        <li>De la patience, jamais de jargon, jamais de jugement</li>
+        <li>De la patience, des explications claires, jamais de jugement</li>
         <li>Auto-entrepreneur déclaré, facture remise à chaque séance</li>
       </ul>
     </div>
@@ -569,11 +586,36 @@ a:focus-visible,button:focus-visible,input:focus-visible,textarea:focus-visible{
   <p class="pricing-note">Le premier rendez-vous — le diagnostic de 30 minutes — est <strong>toujours offert</strong>.</p>
 </section>
 
-<!-- ================= TÉMOIGNAGE ================= -->
-<section style="background:var(--vert-clair);border-radius:clamp(24px,4vw,48px);margin:0 clamp(12px,3vw,40px)">
-  <div class="testimonial reveal">
-    <blockquote>Maintenant j'appelle ma fille en vidéo toute seule. Loïc est patient, il explique avec des mots simples, et surtout il ne fait jamais à ma place.</blockquote>
-    <cite>Une cliente d'Ollioules <span>Accompagnée à domicile</span></cite>
+<!-- ================= TÉMOIGNAGES ================= -->
+<section id="avis" style="background:var(--vert-clair);border-radius:clamp(24px,4vw,48px);margin:0 clamp(12px,3vw,40px);overflow:hidden">
+  <div class="section-head reveal" style="text-align:center;margin-left:auto;margin-right:auto">
+    <span class="eyebrow" style="justify-content:center;display:inline-flex">Avis clients</span>
+    <h2>Ils ont franchi le pas.</h2>
+  </div>
+  <div class="carousel-wrap">
+    <div class="carousel-track" id="carouselTrack">
+      <div class="tcard">
+        <div class="tcard-stars">★★★★★</div>
+        <blockquote>Loïc m'a bien expliqué comment me servir de mon téléphone.</blockquote>
+        Josette Lapeyre <span>Avis Google · Juin 2026</span>
+        <div class="tcard-badge">Google</div>
+      </div>
+      <div class="tcard">
+        <div class="tcard-stars">★★★★★</div>
+        <blockquote>Maintenant j'appelle ma fille en vidéo toute seule. Il explique simplement et ne fait jamais à ma place.</blockquote>
+        Une cliente d'Ollioules <span>Accompagnée à domicile</span>
+      </div>
+      <div class="tcard">
+        <div class="tcard-stars">★★★★★</div>
+        <blockquote>Depuis les séances avec Loïc, je fais mes démarches en ligne sans appeler mes enfants à chaque fois.</blockquote>
+        Un client de Toulon <span>Accompagné à domicile</span>
+      </div>
+    </div>
+    <div class="carousel-nav">
+      <button class="cnav" id="cPrev" aria-label="Précédent">←</button>
+      <div class="cdots" id="cDots"></div>
+      <button class="cnav" id="cNext" aria-label="Suivant">→</button>
+    </div>
   </div>
 </section>
 
@@ -765,6 +807,32 @@ if(window.matchMedia('(hover:hover)').matches && !reduceMotion){
     el.addEventListener('pointerleave',()=>cursor.classList.remove('grow'));
   });
 }else{cursor.style.display='none'}
+
+/* ===== Carrousel avis ===== */
+(function(){
+  const track=document.getElementById('carouselTrack');
+  const dotsWrap=document.getElementById('cDots');
+  if(!track)return;
+  const cards=track.querySelectorAll('.tcard');
+  let cur=0,autoT;
+  cards.forEach((_,i)=>{
+    const d=document.createElement('button');
+    d.className='cdot'+(i===0?' active':'');
+    d.setAttribute('aria-label','Avis '+(i+1));
+    d.onclick=()=>go(i);
+    dotsWrap.appendChild(d);
+  });
+  function go(n){
+    cur=(n+cards.length)%cards.length;
+    track.style.transform=`translateX(calc(-${cur}*(100% + 24px)))`;
+    dotsWrap.querySelectorAll('.cdot').forEach((d,i)=>d.classList.toggle('active',i===cur));
+  }
+  document.getElementById('cPrev').onclick=()=>{clearInterval(autoT);go(cur-1);startAuto()};
+  document.getElementById('cNext').onclick=()=>{clearInterval(autoT);go(cur+1);startAuto()};
+  function startAuto(){autoT=setInterval(()=>go(cur+1),5000)}
+  startAuto();
+  track.addEventListener('touchstart',e=>{const x=e.touches[0].clientX;track.addEventListener('touchend',function h(e2){clearInterval(autoT);go(e2.changedTouches[0].clientX-x<-40?cur+1:e2.changedTouches[0].clientX-x>40?cur-1:cur);startAuto();track.removeEventListener('touchend',h)},{once:true})},{passive:true});
+})();
 
 /* ===== Marquee : duplication pour boucle infinie ===== */
 const track=document.getElementById('marqueeTrack');
