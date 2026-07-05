@@ -171,13 +171,13 @@ header.scrolled{background:rgba(250,246,238,.92);backdrop-filter:blur(12px);box-
 @keyframes blink{50%{opacity:0}}
 .hero p{max-width:52ch;font-size:clamp(1.05rem,1.6vw,1.25rem);margin:30px 0 40px;color:#33553f}
 .hero-ctas{display:flex;gap:18px;flex-wrap:wrap;align-items:center}
-.hero-note{font-size:.9rem;color:#5b7263;margin-top:18px}
+.hero-note{font-size:.9rem;color:#46604f;margin-top:18px}
 .hero-note strong{color:var(--vert)}
 .scroll-hint{
   position:absolute;bottom:28px;left:50%;transform:translateX(-50%);
-  display:flex;flex-direction:column;align-items:center;gap:8px;color:#5b7263;font-size:.78rem;letter-spacing:.1em;text-transform:uppercase;
+  display:flex;flex-direction:column;align-items:center;gap:8px;color:#46604f;font-size:.78rem;letter-spacing:.1em;text-transform:uppercase;
 }
-.scroll-hint .wheel{width:26px;height:42px;border:2px solid #5b7263;border-radius:14px;position:relative}
+.scroll-hint .wheel{width:26px;height:42px;border:2px solid #46604f;border-radius:14px;position:relative}
 .scroll-hint .wheel::after{content:'';position:absolute;top:8px;left:50%;transform:translateX(-50%);width:4px;height:8px;border-radius:4px;background:var(--miel);animation:wheel 1.6s infinite}
 @keyframes wheel{0%{opacity:1;top:8px}70%{opacity:0;top:22px}100%{opacity:0}}
 
@@ -227,7 +227,7 @@ h2 .hl::after{content:'';position:absolute;left:-2%;bottom:6%;width:104%;height:
 }
 .card:hover .ico{transform:rotate(-8deg) scale(1.12);background:var(--miel)}
 .card h3{font-family:'Fraunces',serif;font-size:1.3rem;margin-bottom:10px}
-.card p{font-size:1rem;color:#41604d}
+.card p{font-size:1rem;color:#33553f}
 
 /* ---------- Étapes ---------- */
 .steps{background:var(--encre);color:var(--ivoire);border-radius:clamp(24px,4vw,48px);margin:0 clamp(12px,3vw,40px)}
@@ -244,7 +244,7 @@ h2 .hl::after{content:'';position:absolute;left:-2%;bottom:6%;width:104%;height:
   font-family:'Fraunces',serif;font-size:3rem;font-weight:700;color:var(--miel);line-height:1;margin-bottom:16px;display:block;
 }
 .step h3{font-family:'Fraunces',serif;font-size:1.25rem;margin-bottom:10px}
-.step p{font-size:1rem;color:rgba(250,246,238,.78)}
+.step p{font-size:1rem;color:rgba(250,246,238,.92)}
 
 /* ---------- À propos ---------- */
 .about-wrap{display:grid;grid-template-columns:.7fr 1.3fr;gap:clamp(40px,7vw,90px);align-items:center;max-width:1150px;margin:0 auto}
@@ -288,12 +288,12 @@ h2 .hl::after{content:'';position:absolute;left:-2%;bottom:6%;width:104%;height:
 }
 .price-card .plan{font-weight:800;letter-spacing:.1em;text-transform:uppercase;font-size:1rem;color:var(--vert)}
 .price-card .amount{font-family:'Fraunces',serif;font-size:3rem;font-weight:700;margin:14px 0 4px}
-.price-card .amount small{font-size:1.05rem;font-family:'Montserrat',sans-serif;font-weight:600;color:#5b7263}
+.price-card .amount small{font-size:1.05rem;font-family:'Montserrat',sans-serif;font-weight:600;color:#46604f}
 .price-card ul{list-style:none;margin:24px 0 30px;flex:1}
 .price-card li{padding:9px 0;font-size:1rem;display:flex;gap:12px;align-items:flex-start;border-bottom:1px dashed rgba(20,61,38,.1)}
 .price-card li::before{content:'✓';color:var(--vert);font-weight:800;flex-shrink:0}
 .price-card .btn{justify-content:center}
-.pricing-note{text-align:center;margin-top:34px;color:#5b7263;font-size:1rem}
+.pricing-note{text-align:center;margin-top:34px;color:#46604f;font-size:1rem}
 
 /* ---------- Témoignage ---------- */
 .testimonial{max-width:900px;margin:0 auto;text-align:center}
@@ -303,7 +303,7 @@ h2 .hl::after{content:'';position:absolute;left:-2%;bottom:6%;width:104%;height:
 .testimonial blockquote::before{content:'“';color:var(--miel);font-size:1.6em;line-height:0;vertical-align:-.35em;margin-right:6px}
 .testimonial blockquote::after{content:'”';color:var(--miel);font-size:1.6em;line-height:0;vertical-align:-.35em;margin-left:6px}
 .testimonial cite{display:block;margin-top:26px;font-style:normal;font-weight:700;font-size:1rem;color:var(--vert)}
-.testimonial cite span{display:block;font-weight:500;color:#5b7263;font-size:1rem;margin-top:4px}
+.testimonial cite span{display:block;font-weight:500;color:#46604f;font-size:1rem;margin-top:4px}
 
 /* ---------- FAQ ---------- */
 .faq{max-width:820px;margin:0 auto;width:100%}
@@ -322,7 +322,7 @@ h2 .hl::after{content:'';position:absolute;left:-2%;bottom:6%;width:104%;height:
 }
 .faq-item.open .plus{transform:rotate(45deg);background:var(--miel);color:var(--encre)}
 .faq-a{max-height:0;overflow:hidden;transition:max-height .5s var(--ease)}
-.faq-a p{padding:0 4px 26px;color:#41604d;font-size:1rem;max-width:62ch}
+.faq-a p{padding:0 4px 26px;color:#33553f;font-size:1rem;max-width:62ch}
 
 /* ---------- CTA final ---------- */
 .cta-final{
@@ -361,12 +361,12 @@ form .btn{width:100%;justify-content:center;font-size:1.05rem;padding:17px}
 
 /* ---------- Footer ---------- */
 footer{
-  background:var(--encre);color:rgba(250,246,238,.75);
+  background:var(--encre);color:rgba(250,246,238,.88);
   padding:60px clamp(20px,6vw,80px) 34px;margin-top:20px;
 }
 .footer-grid{display:flex;justify-content:space-between;gap:40px;flex-wrap:wrap;padding-bottom:40px;border-bottom:1px solid rgba(250,246,238,.14)}
 footer .logo{color:var(--ivoire);font-size:1.5rem}
-footer a{color:rgba(250,246,238,.75);text-decoration:none;transition:color .3s}
+footer a{color:rgba(250,246,238,.88);text-decoration:none;transition:color .3s}
 footer a:hover{color:var(--miel)}
 .footer-links{display:flex;flex-direction:column;gap:10px;font-size:1rem}
 .footer-bottom{display:flex;justify-content:space-between;gap:16px;flex-wrap:wrap;padding-top:26px;font-size:.82rem;color:rgba(250,246,238,.5)}
@@ -379,6 +379,7 @@ a:focus-visible,button:focus-visible,input:focus-visible,textarea:focus-visible{
   .burger{display:flex}
   .contact-wrap{grid-template-columns:1fr}
   .hero-blob{filter:blur(40px);width:280px;height:280px;animation:none}
+  .faq-q .plus{width:44px;height:44px}
 }
 @media (prefers-reduced-motion:reduce){
   *,*::before,*::after{animation-duration:.001s !important;transition-duration:.001s !important;scroll-behavior:auto !important}
@@ -634,7 +635,7 @@ a:focus-visible,button:focus-visible,input:focus-visible,textarea:focus-visible{
         <input type="tel" id="tel" name="telephone" placeholder="Ex. : 06 12 34 56 78" required>
       </div>
       <div class="field">
-        <label for="email">Votre email <span style="font-weight:500;color:#5b7263">(facultatif)</span></label>
+        <label for="email">Votre email <span style="font-weight:500;color:#46604f">(facultatif)</span></label>
         <input type="email" id="email" name="email" placeholder="Ex. : marie.durand@gmail.com">
       </div>
       <div class="field">
@@ -642,7 +643,7 @@ a:focus-visible,button:focus-visible,input:focus-visible,textarea:focus-visible{
         <textarea id="msg" name="message" placeholder="Ex. : Je voudrais apprendre à faire des appels vidéo avec ma tablette…" required></textarea>
       </div>
       <button type="submit" class="btn">Envoyer ma demande <span class="arr">→</span></button>
-      <p style="font-size:.8rem;color:#5b7263;margin-top:14px;text-align:center">Vos informations servent uniquement à vous recontacter. Jamais partagées.</p>
+      <p style="font-size:.8rem;color:#46604f;margin-top:14px;text-align:center">Vos informations servent uniquement à vous recontacter. Jamais partagées.</p>
     </form>
   </div>
 </section>
