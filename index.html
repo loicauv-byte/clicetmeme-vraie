@@ -315,16 +315,18 @@ h2 .hl::after{content:'';position:absolute;left:-2%;bottom:6%;width:104%;height:
 .testimonial cite span{display:block;font-weight:500;color:#5b7263;font-size:.85rem;margin-top:4px}
 
 /* ---------- Carrousel avis ---------- */
-.carousel-wrap{position:relative;padding:0 0 50px}
+.carousel-wrap{position:relative;padding:0}
 .carousel-track{display:flex;gap:24px;transition:transform .55s cubic-bezier(.22,1,.36,1);will-change:transform}
 .tcard{min-width:100%;background:var(--blanc);border-radius:var(--radius);padding:clamp(28px,4vw,44px);box-shadow:0 10px 40px rgba(20,61,38,.1);display:flex;flex-direction:column;gap:18px;position:relative}
 .tcard-stars{color:var(--miel);font-size:1.3rem;letter-spacing:3px}
 .tcard blockquote{font-family:'Fraunces',serif;font-size:clamp(1.15rem,2.4vw,1.55rem);font-weight:600;line-height:1.4;color:var(--encre)}
 .tcard blockquote::before{content:'"';color:var(--miel);font-size:1.6em;line-height:0;vertical-align:-.35em;margin-right:6px}
+.tcard blockquote::after{content:'"';color:var(--miel);font-size:1.6em;line-height:0;vertical-align:-.35em;margin-left:6px}
 .tcard cite{font-style:normal;font-weight:700;font-size:.95rem;color:var(--vert);margin-top:auto}
 .tcard cite span{display:block;font-weight:500;color:#5b7263;font-size:.82rem;margin-top:4px}
 .tcard-badge{position:absolute;top:24px;right:24px;background:#4285F4;color:#fff;font-size:.72rem;font-weight:800;letter-spacing:.08em;text-transform:uppercase;padding:5px 12px;border-radius:100px}
 .carousel-nav{display:flex;align-items:center;justify-content:center;gap:18px;margin-top:32px}
+.carousel-nav{display:none}
 .cnav{width:46px;height:46px;border-radius:50%;border:2px solid var(--vert);background:none;cursor:pointer;font-size:1.1rem;color:var(--vert);display:flex;align-items:center;justify-content:center;transition:background .3s,color .3s,transform .3s}
 .cnav:hover{background:var(--vert);color:#fff;transform:scale(1.08)}
 .cdots{display:flex;gap:8px}
@@ -404,6 +406,7 @@ a:focus-visible,button:focus-visible,input:focus-visible,textarea:focus-visible{
   .header-mobile-actions{display:flex}
   .burger{display:flex}
   .contact-wrap{grid-template-columns:1fr}
+  .hero-blob{filter:blur(40px);width:280px;height:280px;animation:none}
 }
 @media (prefers-reduced-motion:reduce){
   *,*::before,*::after{animation-duration:.001s !important;transition-duration:.001s !important;scroll-behavior:auto !important}
@@ -560,7 +563,7 @@ a:focus-visible,button:focus-visible,input:focus-visible,textarea:focus-visible{
       <a href="#contact" class="btn" style="background:var(--encre)">Choisir cette formule</a>
     </div>
     <div class="price-card featured reveal d2">
-      <span class="badge">Le plus choisi</span>
+      <span class="badge">Recommandé</span>
       <span class="plan">Formule Essentiel</span>
       <div class="amount">40€<small> / mois</small></div>
       <ul>
@@ -600,16 +603,6 @@ a:focus-visible,button:focus-visible,input:focus-visible,textarea:focus-visible{
         Josette Lapeyre <span>Avis Google · Juin 2026</span>
         <div class="tcard-badge">Google</div>
       </div>
-      <div class="tcard">
-        <div class="tcard-stars">★★★★★</div>
-        <blockquote>Maintenant j'appelle ma fille en vidéo toute seule. Il explique simplement et ne fait jamais à ma place.</blockquote>
-        Une cliente d'Ollioules <span>Accompagnée à domicile</span>
-      </div>
-      <div class="tcard">
-        <div class="tcard-stars">★★★★★</div>
-        <blockquote>Depuis les séances avec Loïc, je fais mes démarches en ligne sans appeler mes enfants à chaque fois.</blockquote>
-        Un client de Toulon <span>Accompagné à domicile</span>
-      </div>
     </div>
     <div class="carousel-nav">
       <button class="cnav" id="cPrev" aria-label="Précédent">←</button>
@@ -635,7 +628,7 @@ a:focus-visible,button:focus-visible,input:focus-visible,textarea:focus-visible{
       <div class="faq-a"><p>Non. On travaille sur vos appareils actuels : votre téléphone, votre tablette ou votre ordinateur. Si un achat devient utile un jour, je vous conseille en toute indépendance — je ne vends rien.</p></div>
     </div>
     <div class="faq-item reveal">
-      <button class="faq-q" aria-expanded="false">Comment se passe le règlement ?<span class="plus">-</span></button>
+      <button class="faq-q" aria-expanded="false">Comment se passe le règlement ?<span class="plus">+</span></button>
       <div class="faq-a"><p>Par virement bancaire, chèque ou espèces, à la fin de chaque séance ou chaque mois pour les formules. Une facture vous est remise systématiquement.</p></div>
     </div>
     <div class="faq-item reveal">
