@@ -157,6 +157,8 @@ header.scrolled{background:rgba(250,246,238,.92);backdrop-filter:blur(12px);box-
 .hero-blob.b1{width:520px;height:520px;background:var(--vert-clair);top:-120px;right:-120px}
 .hero-blob.b2{width:420px;height:420px;background:#f3e3c3;bottom:-140px;left:-100px;animation-delay:-6s}
 @keyframes float{from{transform:translate(0,0) scale(1)}to{transform:translate(-40px,40px) scale(1.1)}}
+.hero h1,.hero p,.hero-ctas,.hero-note{position:relative;z-index:2}
+.hero-blob{z-index:0}
 .eyebrow{
   display:inline-flex;align-items:center;gap:10px;font-weight:700;font-size:.82rem;
   letter-spacing:.14em;text-transform:uppercase;color:var(--vert);margin-bottom:26px;
@@ -378,7 +380,7 @@ a:focus-visible,button:focus-visible,input:focus-visible,textarea:focus-visible{
   .header-mobile-actions{display:flex}
   .burger{display:flex}
   .contact-wrap{grid-template-columns:1fr}
-  .hero-blob{filter:blur(40px);width:280px;height:280px;animation:none}
+  .hero-blob{display:none}
   .faq-q .plus{width:44px;height:44px}
 }
 @media (prefers-reduced-motion:reduce){
