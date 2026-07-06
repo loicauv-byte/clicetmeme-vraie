@@ -230,6 +230,15 @@ h2 .hl::after{content:'';position:absolute;left:-2%;bottom:6%;width:104%;height:
 .card:hover .ico{transform:rotate(-8deg) scale(1.12);background:var(--miel)}
 .card h3{font-family:'Fraunces',serif;font-size:1.3rem;margin-bottom:10px}
 .card p{font-size:1rem;color:#33553f}
+.service-banner{
+  background:var(--blanc);border-radius:var(--radius);padding:30px;
+  border:1px solid rgba(20,61,38,.08);
+  display:flex;gap:20px;align-items:center;margin-top:22px;
+}
+.service-banner .ico{flex-shrink:0;margin-bottom:0}
+.service-banner h3{font-family:'Fraunces',serif;font-size:1.3rem;margin-bottom:10px}
+.service-banner p{font-size:1rem;color:#33553f}
+@media (max-width:600px){.service-banner{flex-direction:column;align-items:flex-start}}
 
 /* ---------- Étapes ---------- */
 .steps{background:var(--encre);color:var(--ivoire);border-radius:clamp(24px,4vw,48px);margin:0 clamp(12px,3vw,40px)}
@@ -469,6 +478,13 @@ a:focus-visible,button:focus-visible,input:focus-visible,textarea:focus-visible{
       <p>Démarches administratives en ligne pas à pas, et les bons réflexes pour reconnaître les arnaques et protéger vos comptes.</p>
     </div>
   </div>
+  <div class="service-banner reveal">
+    <div class="ico">🔧</div>
+    <div>
+      <h3>Un problème précis à régler ?</h3>
+      <p>Imprimante qui ne répond plus, boîte mail bloquée, téléphone saturé, doute sur un message suspect… Je me déplace, je résous le problème avec vous — et je vous montre comment faire la prochaine fois.</p>
+    </div>
+  </div>
 </section>
 
 <!-- ================= MÉTHODE ================= -->
@@ -586,6 +602,10 @@ a:focus-visible,button:focus-visible,input:focus-visible,textarea:focus-visible{
     <div class="faq-item reveal">
       <button class="faq-q" aria-expanded="false">Je pars vraiment de zéro, est-ce grave ?<span class="plus">+</span></button>
       <div class="faq-a"><p>Pas du tout — c'est même le cœur de mon métier. On commence exactement là où vous en êtes, sans jugement, et on avance à votre rythme. Beaucoup de mes clients n'avaient jamais touché une tablette avant la première séance.</p></div>
+    </div>
+    <div class="faq-item reveal">
+      <button class="faq-q" aria-expanded="false">J'ai juste un problème à résoudre, pas besoin de cours…<span class="plus">+</span></button>
+      <div class="faq-a"><p>Aucun souci : beaucoup de mes accompagnements commencent par un problème concret. Je viens, on le règle ensemble, et vous repartez avec la solution ET la méthode. Si vous souhaitez aller plus loin ensuite, c'est vous qui décidez.</p></div>
     </div>
     <div class="faq-item reveal">
       <button class="faq-q" aria-expanded="false">Faut-il que j'achète du matériel ?<span class="plus">+</span></button>
