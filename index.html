@@ -300,11 +300,14 @@ h2 .hl::after{content:'';position:absolute;left:-2%;bottom:6%;width:104%;height:
 .price-card .plan{font-weight:800;letter-spacing:.1em;text-transform:uppercase;font-size:1rem;color:var(--vert)}
 .price-card .amount{font-family:'Fraunces',serif;font-size:3rem;font-weight:700;margin:14px 0 4px}
 .price-card .amount small{font-size:1.05rem;font-family:'Montserrat',sans-serif;font-weight:600;color:#46604f}
+.price-card .save{font-size:1.02rem;font-weight:700;color:var(--vert);margin-bottom:6px}
+.price-card .tagline{font-style:italic;color:#46604f;font-size:.98rem;margin-bottom:6px}
 .price-card ul{list-style:none;margin:24px 0 30px;flex:1}
-.price-card li{padding:9px 0;font-size:1rem;display:flex;gap:12px;align-items:flex-start;border-bottom:1px dashed rgba(20,61,38,.1)}
+.price-card li{padding:9px 0;font-size:1.05rem;display:flex;gap:12px;align-items:flex-start;border-bottom:1px dashed rgba(20,61,38,.1)}
 .price-card li::before{content:'✓';color:var(--vert);font-weight:800;flex-shrink:0}
-.price-card .btn{justify-content:center}
-.pricing-note{text-align:center;margin-top:34px;color:#46604f;font-size:1rem}
+.price-card .btn{justify-content:center;font-size:1.05rem}
+.pricing-note{text-align:center;margin-top:20px;color:#46604f;font-size:1rem}
+.pricing-note.agrement{max-width:640px;margin-left:auto;margin-right:auto;font-weight:600;color:var(--vert)}
 
 /* ---------- Témoignage ---------- */
 .testimonial{max-width:900px;margin:0 auto;text-align:center}
@@ -542,41 +545,39 @@ a:focus-visible,button:focus-visible,input:focus-visible,textarea:focus-visible{
   </div>
   <div class="pricing-grid">
     <div class="price-card reveal d1">
-      <span class="plan">Séance à l'unité</span>
-      <div class="amount">50€<small> / séance</small></div>
+      <span class="plan">Séance découverte</span>
+      <div class="amount">50€<small> / 1 heure</small></div>
+      <p class="tagline">Idéal pour faire connaissance</p>
       <ul>
-        <li>1 heure à domicile</li>
-        <li>Sur vos propres appareils</li>
-        <li>Fiche mémo offerte</li>
         <li>Sans engagement</li>
+        <li>Diagnostic gratuit inclus</li>
       </ul>
-      <a href="#contact" class="btn" style="background:var(--encre)">Choisir cette formule</a>
+      <a href="tel:+33667062185" class="btn" style="background:var(--encre)" onclick="gtag('event','conversion_appel',{event_category:'contact'})">📞 Appelez-moi</a>
     </div>
     <div class="price-card featured reveal d2">
-      <span class="badge">Recommandé</span>
-      <span class="plan">Formule Essentiel</span>
-      <div class="amount">40€<small> / mois</small></div>
+      <span class="badge">Le plus choisi</span>
+      <span class="plan">Pack 10 séances</span>
+      <div class="amount">400€<small> au total</small></div>
+      <p class="save">Soit 40€/séance — économisez 100€</p>
       <ul>
-        <li>1 séance par mois à domicile</li>
-        <li>Suivi régulier de vos progrès</li>
-        <li>Fiches mémo personnalisées</li>
-        <li>Tarif préférentiel fidélité</li>
+        <li>Séances utilisables à votre rythme, sans date limite</li>
+        <li>Paiement possible en 2 fois</li>
       </ul>
-      <a href="#contact" class="btn gold">Choisir cette formule</a>
+      <a href="tel:+33667062185" class="btn gold" onclick="gtag('event','conversion_appel',{event_category:'contact'})">📞 Appelez-moi</a>
     </div>
     <div class="price-card reveal d3">
-      <span class="plan">Formule Confort</span>
-      <div class="amount">75€<small> / mois</small></div>
+      <span class="plan">Pack 5 séances</span>
+      <div class="amount">225€<small> au total</small></div>
+      <p class="save">Soit 45€/séance — économisez 25€</p>
       <ul>
-        <li>2 séances par mois à domicile</li>
-        <li>Progression accélérée</li>
-        <li>Fiches mémo personnalisées</li>
-        <li>Priorité sur les créneaux</li>
+        <li>Séances utilisables à votre rythme, sans date limite</li>
+        <li>Paiement en une fois (chèque ou espèces)</li>
       </ul>
-      <a href="#contact" class="btn" style="background:var(--encre)">Choisir cette formule</a>
+      <a href="tel:+33667062185" class="btn" style="background:var(--encre)" onclick="gtag('event','conversion_appel',{event_category:'contact'})">📞 Appelez-moi</a>
     </div>
   </div>
   <p class="pricing-note">Le premier rendez-vous — le diagnostic de 30 minutes — est <strong>toujours offert</strong>.</p>
+  <p class="pricing-note agrement">Agrément Services à la Personne en cours — bientôt 50&nbsp;% de crédit d'impôt sur toutes les formules.</p>
 </section>
 
 <!-- ================= TÉMOIGNAGE ================= -->
@@ -613,7 +614,7 @@ a:focus-visible,button:focus-visible,input:focus-visible,textarea:focus-visible{
     </div>
     <div class="faq-item reveal">
       <button class="faq-q" aria-expanded="false">Comment se passe le règlement ?<span class="plus">+</span></button>
-      <div class="faq-a"><p>Par virement bancaire, chèque ou espèces, à la fin de chaque séance ou chaque mois pour les formules. Une facture vous est remise systématiquement.</p></div>
+      <div class="faq-a"><p>Par virement bancaire, chèque ou espèces. La séance découverte se règle à la fin du rendez-vous. Les packs se règlent en une fois — ou en 2 fois pour le pack 10 séances. Une facture vous est remise systématiquement.</p></div>
     </div>
     <div class="faq-item reveal">
       <button class="faq-q" aria-expanded="false">Puis-je offrir des séances à un parent ?<span class="plus">+</span></button>
