@@ -3,186 +3,32 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Contact — Numérique &amp; Vous · Aide numérique à domicile Toulon</title>
-<meta name="description" content="Contactez Loïc pour une première visite gratuite à domicile. Aide numérique à Toulon, Ollioules et environs.">
+<title>Contact — Numérique &amp; Vous · Dépannage &amp; services informatiques Toulon</title>
+<meta name="description" content="Contactez Loïc pour un devis gratuit sous 24 heures. Dépannage, optimisation et montage PC sur mesure à Toulon, Ollioules et environs.">
 <meta name="robots" content="index, follow">
 <link rel="canonical" href="https://www.numeriquevous.fr/contact">
 <meta http-equiv="refresh" content="0;url=/#contact">
 <link rel="icon" type="image/svg+xml" href="/favicon.svg">
 <link rel="alternate icon" href="/favicon.svg">
-<link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700;800;900&family=Lato:wght@400;700;900&display=swap" rel="stylesheet">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Archivo:wght@600;700;800&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
 <style>
-  :root {
-    --green-dark:  #1e6b3c;
-    --green-mid:   #2d7a4f;
-    --green-light: #4aa96c;
-    --green-pale:  #eef7f1;
-    --beige:       #f4fbf6;
-    --text:        #1a3326;
-    --text-light:  #5a7d6a;
+  :root{
+    --ivoire:#f2f5f7;
+    --encre:#152233;
+    --vert:#175d8d;
+    --vert-clair:#e0eaf2;
+    --miel:#e0702a;
   }
-
-  * { margin: 0; padding: 0; box-sizing: border-box; }
-  html { scroll-behavior: smooth; }
-  body { font-family: 'Lato', sans-serif; background: var(--beige); color: var(--text); overflow-x: hidden; }
-
-  header {
-    background: #fff;
-    padding: 10px 48px;
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    gap: 24px;
-    box-shadow: 0 2px 14px rgba(26,51,38,0.08);
-    position: sticky;
-    top: 0;
-    z-index: 100;
-  }
-  .logo-link { display: flex; align-items: center; text-decoration: none; }
-  .logo-svg { height: 78px; width: auto; display: block; }
-
-  nav { display: flex; align-items: center; gap: 6px; }
-  nav a.nav-link { font-size: 15px; font-weight: 700; color: var(--text-light); text-decoration: none; padding: 9px 18px; border-radius: 50px; transition: background 0.2s, color 0.2s; }
-  nav a.nav-link:hover { background: var(--green-pale); color: var(--green-dark); }
-  nav a.nav-link.active { color: var(--green-dark); }
-  nav a.cta-header { background: var(--green-dark); color: #fff; padding: 12px 24px; border-radius: 50px; font-size: 15px; font-weight: 700; text-decoration: none; transition: background 0.2s; margin-left: 6px; font-family: 'Montserrat', sans-serif; }
-  nav a.cta-header:hover { background: var(--green-mid); }
-
-  .page-hero {
-    background: linear-gradient(135deg, var(--green-dark) 0%, var(--green-light) 100%);
-    padding: 56px 32px;
-    text-align: center;
-  }
-  .page-hero h1 { font-family: 'Montserrat', sans-serif; font-weight: 800; font-size: clamp(28px, 5vw, 44px); color: #fff; margin-bottom: 10px; letter-spacing: -0.5px; }
-  .page-hero p { font-size: 18px; color: rgba(255,255,255,0.88); max-width: 680px; margin: 0 auto; }
-
-  .contact-page {
-    max-width: 960px;
-    margin: 64px auto;
-    padding: 0 24px;
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-    gap: 36px;
-    align-items: start;
-  }
-
-  .infos-card {
-    background: #fff;
-    border-radius: 16px;
-    padding: 30px 26px;
-    box-shadow: 0 4px 20px rgba(0,0,0,0.06);
-  }
-  .infos-card h2 { font-family: 'Montserrat', sans-serif; font-weight: 800; font-size: 20px; color: var(--green-dark); margin-bottom: 22px; }
-
-  .info-item { display: flex; align-items: flex-start; gap: 14px; margin-bottom: 18px; }
-  .info-item .icon { font-size: 24px; flex-shrink: 0; margin-top: 2px; }
-  .info-item h4 { font-family: 'Montserrat', sans-serif; font-weight: 700; font-size: 14px; color: var(--text); margin-bottom: 3px; }
-  .info-item p, .info-item a { font-size: 14px; color: var(--text-light); line-height: 1.5; text-decoration: none; }
-  .info-item a:hover { color: var(--green-dark); }
-
-  .badge-gratuit {
-    display: inline-block;
-    background: var(--green-pale);
-    color: var(--green-dark);
-    font-size: 12px;
-    font-weight: 700;
-    font-family: 'Montserrat', sans-serif;
-    padding: 6px 14px;
-    border-radius: 20px;
-    margin-top: 8px;
-    letter-spacing: 0.3px;
-  }
-
-  .btn-tel {
-    display: block;
-    background: var(--green-dark);
-    color: #fff;
-    font-family: 'Montserrat', sans-serif;
-    font-weight: 800;
-    font-size: 18px;
-    text-align: center;
-    padding: 16px;
-    border-radius: 50px;
-    text-decoration: none;
-    margin-top: 20px;
-    transition: background 0.2s;
-  }
-  .btn-tel:hover { background: var(--green-mid); }
-
-  .form-card {
-    background: #fff;
-    border-radius: 16px;
-    padding: 34px 30px;
-    box-shadow: 0 4px 20px rgba(0,0,0,0.06);
-  }
-  .form-card h2 { font-family: 'Montserrat', sans-serif; font-weight: 800; font-size: 22px; color: var(--text); margin-bottom: 6px; }
-  .form-subtitle { font-size: 14px; color: var(--text-light); margin-bottom: 24px; }
-
-  .field { margin-bottom: 14px; }
-  .field label { display: block; font-size: 13px; color: var(--text-light); margin-bottom: 5px; font-weight: 700; }
-  .field input, .field select, .field textarea {
-    width: 100%;
-    padding: 11px 13px;
-    border: 1.5px solid #dce8e1;
-    border-radius: 10px;
-    font-size: 14px;
-    font-family: 'Lato', sans-serif;
-    color: var(--text);
-    background: #fff;
-    transition: border-color 0.15s, box-shadow 0.15s;
-    appearance: none;
-    -webkit-appearance: none;
-  }
-  .field input:focus, .field select:focus, .field textarea:focus {
-    outline: none;
-    border-color: var(--green-dark);
-    box-shadow: 0 0 0 3px rgba(30,107,60,0.1);
-  }
-  .field textarea { resize: vertical; min-height: 80px; }
-
-  .grid-2 { display: grid; grid-template-columns: repeat(auto-fit, minmax(130px, 1fr)); gap: 10px; }
-
-  .check-label { font-size: 13px; color: var(--text-light); margin-bottom: 8px; font-weight: 700; display: block; }
-  .checkbox-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(150px, 1fr)); gap: 8px; margin-bottom: 14px; }
-  .checkbox-item { display: flex; align-items: center; gap: 8px; font-size: 13.5px; color: var(--text); cursor: pointer; }
-  .checkbox-item input[type="checkbox"] { width: 16px; height: 16px; accent-color: var(--green-dark); cursor: pointer; flex-shrink: 0; }
-
-  .rgpd { background: var(--beige); border-radius: 8px; padding: 10px 13px; display: flex; gap: 10px; align-items: flex-start; margin-bottom: 16px; }
-  .rgpd p { font-size: 12px; color: var(--text-light); line-height: 1.5; }
-
-  .btn-submit {
-    width: 100%;
-    padding: 15px;
-    background: var(--green-dark);
-    color: #fff;
-    border: none;
-    border-radius: 50px;
-    font-size: 17px;
-    font-weight: 800;
-    font-family: 'Montserrat', sans-serif;
-    cursor: pointer;
-    transition: background 0.15s, transform 0.1s;
-  }
-  .btn-submit:hover { background: var(--green-mid); }
-  .btn-submit:active { transform: scale(0.98); }
-  .btn-submit:disabled { background: #9ac3b3; cursor: not-allowed; }
-
-  .footer-note { text-align: center; font-size: 12px; color: var(--text-light); margin-top: 10px; }
-
-  .msg { display: none; padding: 12px 14px; border-radius: 10px; font-size: 14px; margin-bottom: 14px; font-weight: 700; }
-  .msg.success { background: var(--green-pale); color: var(--green-dark); border: 1.5px solid #b2dfc8; }
-  .msg.error { background: #fef2f2; color: #c0392b; border: 1.5px solid #f5c6c6; }
-
-  footer { background: #1a3326; color: rgba(255,255,255,0.5); text-align: center; padding: 28px 24px; font-size: 13px; }
-  footer span { color: var(--green-light); }
-
-  @media (max-width: 650px) {
-    header { padding: 10px 20px; }
-    .logo-svg { height: 54px; }
-    nav a.nav-link { display: none; }
-    nav a.cta-header { font-size: 13px; padding: 10px 16px; }
-    .contact-page { margin: 32px auto; }
-  }
+  *{margin:0;padding:0;box-sizing:border-box}
+  body{font-family:'Inter',sans-serif;background:var(--ivoire);color:var(--encre);min-height:100vh;display:flex;align-items:center;justify-content:center;padding:32px;text-align:center}
+  .card{max-width:520px;background:#fff;border-radius:22px;padding:52px 40px;box-shadow:0 20px 50px rgba(21,34,51,.1);border:1px solid rgba(21,34,51,.08)}
+  h1{font-family:'Archivo',sans-serif;font-weight:700;font-size:1.7rem;margin-bottom:16px;letter-spacing:-.02em}
+  p{font-size:1.05rem;line-height:1.6;color:#3d5166;margin-bottom:22px}
+  a.btn{display:inline-flex;align-items:center;gap:8px;background:var(--vert);color:#fff;padding:14px 28px;border-radius:100px;font-weight:700;text-decoration:none}
+  a.link{display:block;margin-top:18px;color:var(--vert);font-weight:600;text-decoration:none}
+  a.link:hover{color:var(--miel)}
 </style>
 <script async src="https://www.googletagmanager.com/gtag/js?id=AW-18206550386"></script>
 <script>
@@ -193,166 +39,11 @@
 </script>
 </head>
 <body>
-
-<p style="text-align:center;padding:14px;font-size:14px;background:#eef7f1;color:#1a3326">
-  Redirection en cours vers la nouvelle page de contact…
-  <a href="/#contact" style="color:#1e6b3c;font-weight:700">Cliquez ici si la redirection ne fonctionne pas</a>.
-</p>
-
-<header>
-  <a href="/" class="logo-link" aria-label="Numérique &amp; Vous — Accueil">
-    <img src="/logo.png" alt="Numérique &amp; Vous" class="logo-svg">
-  </a>
-  <nav>
-    <a href="/" class="nav-link">Accueil</a>
-    <a href="/contact" class="nav-link active">Contact</a>
-    <a href="tel:0667062185" class="cta-header">Nous appeler</a>
-  </nav>
-</header>
-
-<div class="page-hero">
-  <h1>Contactez Loïc</h1>
-  <p>Diagnostic offert — 30 min pour découvrir vos besoins · Réponse sous 24h · Zone Toulon / Ollioules</p>
-</div>
-
-<div class="contact-page">
-
-  <div class="infos-card">
-    <h2>Comment me joindre</h2>
-
-    <div class="info-item">
-      <span class="icon">📞</span>
-      <div>
-        <h4>Par téléphone</h4>
-        <a href="tel:0667062185">06 67 06 21 85</a>
-        <p>Du lundi au dimanche</p>
-      </div>
-    </div>
-
-    <div class="info-item">
-      <span class="icon">✉️</span>
-      <div>
-        <h4>Par email</h4>
-        <a href="mailto:numeriquevous@gmail.com">numeriquevous@gmail.com</a>
-      </div>
-    </div>
-
-    <div class="info-item">
-      <span class="icon">📍</span>
-      <div>
-        <h4>Zone d'intervention</h4>
-        <p>Toulon · Ollioules · La Seyne · La Garde · Hyères · jusqu'à 30 km</p>
-      </div>
-    </div>
-
-    <div class="info-item">
-      <span class="icon">🤝</span>
-      <div>
-        <h4>Premier rendez-vous</h4>
-        <p>Gratuit, sans engagement, à votre domicile.</p>
-      </div>
-    </div>
-
-    <span class="badge-gratuit">Diagnostic offert — 30 min pour découvrir vos besoins</span>
-
-    <a href="tel:0667062185" class="btn-tel">Appeler maintenant</a>
+  <div class="card">
+    <h1>Redirection en cours…</h1>
+    <p>Vous allez être redirigé vers le formulaire de contact — devis gratuit sous 24 heures.</p>
+    <a href="/#contact" class="btn">Accéder au formulaire →</a>
+    <a href="tel:+33667062185" class="link" onclick="gtag('event','conversion_appel',{event_category:'contact'})">Ou appelez directement le 06 67 06 21 85</a>
   </div>
-
-  <div class="form-card">
-    <h2>Envoyer un message</h2>
-    <p class="form-subtitle">Loïc vous recontacte dans la journée.</p>
-
-    <div id="msg-success" class="msg success">
-      Message envoyé ! Loïc vous recontacte dans la journée.
-    </div>
-    <div id="msg-error" class="msg error">
-      Une erreur s'est produite. Appelez directement au 06 67 06 21 85.
-    </div>
-
-    <form id="contact-form" action="https://formspree.io/f/mrevwaed" method="POST">
-      <input type="hidden" name="_next" value="https://numeriquevous.fr/merci.html">
-
-      <div class="grid-2">
-        <div class="field">
-          <label for="prenom">Prénom</label>
-          <input type="text" id="prenom" name="prenom" placeholder="ex : Jeanne" required />
-        </div>
-        <div class="field">
-          <label for="telephone">Téléphone</label>
-          <input type="tel" id="telephone" name="telephone" placeholder="06 XX XX XX XX" required />
-        </div>
-      </div>
-
-      <div class="field">
-        <label for="ville">Ville</label>
-        <input type="text" id="ville" name="ville" placeholder="ex : Ollioules, La Garde, Toulon…" />
-      </div>
-
-      <label class="check-label">De quoi avez-vous besoin ?</label>
-      <div class="checkbox-grid">
-        <label class="checkbox-item"><input type="checkbox" name="besoin[]" value="Smartphone / tablette" /> Smartphone / tablette</label>
-        <label class="checkbox-item"><input type="checkbox" name="besoin[]" value="Ordinateur" /> Ordinateur</label>
-        <label class="checkbox-item"><input type="checkbox" name="besoin[]" value="Internet / box" /> Internet / box</label>
-        <label class="checkbox-item"><input type="checkbox" name="besoin[]" value="Applications (photos, mails…)" /> Applications</label>
-        <label class="checkbox-item"><input type="checkbox" name="besoin[]" value="Démarches en ligne" /> Démarches en ligne</label>
-        <label class="checkbox-item"><input type="checkbox" name="besoin[]" value="Autre" /> Autre</label>
-      </div>
-
-      <div class="field">
-        <label for="message">Quelques mots (facultatif)</label>
-        <textarea id="message" name="message" placeholder="Décrivez la situation en quelques mots…"></textarea>
-      </div>
-
-      <div class="rgpd">
-        <span style="font-size:18px; flex-shrink:0;">🔒</span>
-        <p>Vos données sont confidentielles et utilisées uniquement pour vous recontacter. Aucune transmission à des tiers.</p>
-      </div>
-
-      <button type="submit" class="btn-submit" id="btn-submit">
-        Envoyer ma demande →
-      </button>
-      <p class="footer-note">Loïc vous rappelle dans la journée · Diagnostic offert — 30 min pour découvrir vos besoins</p>
-    </form>
-  </div>
-
-</div>
-
-<footer>
-  <p>© 2026 <span>Numérique &amp; Vous</span> · Toulon &amp; environs · Aide numérique à domicile</p>
-  <p style="margin-top:10px; font-size:15px;"><a href="tel:0667062185" style="color:var(--green-light); font-weight:700; text-decoration:none;">06 67 06 21 85</a></p>
-</footer>
-
-<script>
-  document.getElementById('contact-form').addEventListener('submit', async function(e) {
-    e.preventDefault();
-    const btn = document.getElementById('btn-submit');
-    const msgOk = document.getElementById('msg-success');
-    const msgErr = document.getElementById('msg-error');
-
-    btn.disabled = true;
-    btn.textContent = 'Envoi en cours…';
-    msgOk.style.display = 'none';
-    msgErr.style.display = 'none';
-
-    try {
-      const res = await fetch(this.action, {
-        method: 'POST',
-        body: new FormData(this),
-        headers: { 'Accept': 'application/json' }
-      });
-
-      if (res.ok) {
-        window.location.href = '/merci.html';
-      } else {
-        throw new Error();
-      }
-    } catch {
-      msgErr.style.display = 'block';
-      btn.disabled = false;
-      btn.textContent = 'Envoyer ma demande →';
-    }
-  });
-</script>
-
 </body>
 </html>
