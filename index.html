@@ -3,8 +3,8 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Numérique & Vous — Dépannage & services informatiques | Ollioules, Toulon</title>
-<meta name="description" content="Dépannage, optimisation et montage PC sur mesure à Ollioules, Toulon et alentours. Diagnostic et devis gratuits, prix ferme avant toute intervention.">
+<title>Numérique & Vous — Dépannage & services informatiques | Toulon, Ollioules</title>
+<meta name="description" content="Dépannage, optimisation et montage PC sur mesure à Toulon, Ollioules et alentours. Diagnostic et devis gratuits, prix ferme avant toute intervention.">
 <meta name="keywords" content="dépannage informatique Toulon, réparation ordinateur Ollioules, informaticien à domicile Var, montage PC sur mesure Toulon, PC lent optimisation">
 <meta name="author" content="Loïc Auvray">
 <meta name="robots" content="index, follow">
@@ -12,7 +12,7 @@
 <link rel="icon" type="image/svg+xml" href="/favicon.svg">
 <link rel="alternate icon" href="/favicon.svg">
 <meta property="og:title" content="Numérique & Vous — Dépannage & services informatiques">
-<meta property="og:description" content="Dépannage, optimisation et montage PC sur mesure à Ollioules, Toulon et alentours. Diagnostic et devis gratuits.">
+<meta property="og:description" content="Dépannage, optimisation et montage PC sur mesure à Toulon, Ollioules et alentours. Diagnostic et devis gratuits.">
 <meta property="og:url" content="https://www.numeriquevous.fr/">
 <meta property="og:type" content="website">
 <meta property="og:locale" content="fr_FR">
@@ -20,24 +20,25 @@
 <meta property="og:image" content="https://www.numeriquevous.fr/photo_loic.png">
 <meta property="og:image:width" content="800">
 <meta property="og:image:height" content="800">
-<meta property="og:image:alt" content="Loïc, fondateur de Numérique & Vous">
+<meta property="og:image:alt" content="Loïc, co-fondateur de Numérique & Vous">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="Numérique & Vous — Dépannage & services informatiques">
-<meta name="twitter:description" content="Dépannage, optimisation et montage PC sur mesure à Ollioules, Toulon et alentours. Diagnostic et devis gratuits.">
+<meta name="twitter:description" content="Dépannage, optimisation et montage PC sur mesure à Toulon, Ollioules et alentours. Diagnostic et devis gratuits.">
 <meta name="twitter:image" content="https://www.numeriquevous.fr/photo_loic.png">
 <script type="application/ld+json">
 {
   "@context": "https://schema.org",
   "@type": "LocalBusiness",
   "name": "Numérique & Vous",
-  "description": "Dépannage informatique, optimisation, montage PC sur mesure et assistance à Ollioules, Toulon et alentours.",
+  "description": "Dépannage informatique, optimisation, montage PC sur mesure et assistance à Toulon, Ollioules et alentours.",
   "serviceType": ["Dépannage informatique","Réparation ordinateur","Montage PC sur mesure","Optimisation PC","Assistance informatique"],
   "url": "https://www.numeriquevous.fr",
   "telephone": "+33667062185",
   "email": "numeriquevous@gmail.com",
   "image": "https://www.numeriquevous.fr/photo_loic.png",
   "priceRange": "€",
-  "address": { "@type": "PostalAddress", "addressLocality": "Ollioules", "addressRegion": "Var", "postalCode": "83190", "addressCountry": "FR" }
+  "address": { "@type": "PostalAddress", "addressLocality": "Ollioules", "addressRegion": "Var", "postalCode": "83190", "addressCountry": "FR" },
+  "areaServed": ["Toulon","Ollioules","La Seyne-sur-Mer","Six-Fours-les-Plages","Sanary-sur-Mer"]
 }
 </script>
 <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -247,6 +248,12 @@ h2 .hl::after{content:'';position:absolute;left:-2%;bottom:6%;width:104%;height:
 .service-banner h3{font-family:'Archivo',sans-serif;font-size:1.3rem;margin-bottom:10px}
 .service-banner p{font-size:1rem;color:#3d5166}
 @media (max-width:600px){.service-banner{flex-direction:column;align-items:flex-start}}
+/* photos de services (à activer quand les photos seront prêtes) */
+.card-photo{width:100%;height:170px;object-fit:cover;border-radius:14px;margin-bottom:20px;display:block}
+/* sous-bloc professionnels */
+.pro-head{max-width:760px;margin:clamp(50px,7vw,80px) 0 clamp(28px,4vw,44px)}
+.pro-head h3{font-family:'Archivo',sans-serif;font-size:clamp(1.5rem,3vw,2.1rem);letter-spacing:-.02em;margin:12px 0 10px}
+.pro-head p{color:#3d5166;font-size:1.05rem;max-width:58ch}
 
 /* ---------- Étapes ---------- */
 .steps{background:var(--encre);color:var(--ivoire);border-radius:clamp(24px,4vw,48px);margin:0 clamp(12px,3vw,40px)}
@@ -427,20 +434,20 @@ a:focus-visible,button:focus-visible,input:focus-visible,textarea:focus-visible{
 <div class="menu-overlay" id="menu">
   <a href="#services">Services</a>
   <a href="#methode">Comment ça marche</a>
-  <a href="#apropos">Qui suis-je</a>
+  <a href="#apropos">Qui sommes-nous</a>
   <a href="#devis">Devis</a>
   <a href="#faq">Questions fréquentes</a>
   <a href="#contact">Devis gratuit →</a>
-  <div class="menu-foot">Ollioules · Toulon et alentours — 06 67 06 21 85 — numeriquevous@gmail.com</div>
+  <div class="menu-foot">Toulon · Ollioules et alentours — 06 67 06 21 85 — numeriquevous@gmail.com</div>
 </div>
 
 <!-- ================= HERO ================= -->
 <section class="hero" id="top">
   <div class="hero-blob b1"></div>
   <div class="hero-blob b2"></div>
-  <span class="eyebrow">Informaticien indépendant · Ollioules & Toulon</span>
+  <span class="eyebrow">Informaticiens indépendants · Toulon & Ollioules</span>
   <h1>Un problème informatique ?<br><span class="type-wrap"><span id="typed">pc lent au démarrage</span><span class="caret"></span></span></h1>
-  <p>Dépannage, optimisation, montage de PC sur mesure — à domicile ou à distance, pour particuliers et professionnels. Vous décrivez le problème, je vous envoie un devis gratuit, et rien ne démarre sans votre accord.</p>
+  <p>Dépannage, optimisation, montage de PC sur mesure — à domicile ou à distance, pour particuliers et professionnels. Vous décrivez le problème, nous vous envoyons un devis gratuit, et rien ne démarre sans votre accord.</p>
   <div class="hero-ctas">
     <a href="#contact" class="btn gold">Demander mon devis gratuit <span class="arr">→</span></a>
     <a href="tel:+33667062185" class="btn" style="background:var(--encre)" onclick="gtag('event','conversion_appel',{event_category:'contact'})">📞 06 67 06 21 85</a>
@@ -460,37 +467,60 @@ a:focus-visible,button:focus-visible,input:focus-visible,textarea:focus-visible{
 <!-- ================= SERVICES ================= -->
 <section id="services">
   <div class="section-head reveal">
-    <span class="eyebrow">Ce que je fais</span>
-    <h2>Votre panne, mon <span class="hl">métier</span>.</h2>
+    <span class="eyebrow">Ce que nous faisons</span>
+    <h2>Votre panne, notre <span class="hl">métier</span>.</h2>
     <p class="lead">Du PC qui rame à la machine montée sur mesure : un seul interlocuteur, un devis clair, un résultat vérifiable.</p>
   </div>
   <div class="services-grid">
     <div class="card reveal d1">
+      <!-- PHOTO : décommenter quand la photo sera prête (format paysage, ~800x500px, compressée)
+      <img class="card-photo" src="photos/depannage.jpg" alt="" loading="lazy"> -->
       <div class="ico">🔧</div>
       <h3>Dépannage &amp; réparation</h3>
-      <p>PC lent, plantages, écran noir, virus et fenêtres publicitaires, pannes matérielles, Windows qui ne démarre plus. Je diagnostique, je répare, je vous explique ce qui s'est passé.</p>
+      <p>PC lent, plantages, écran noir, virus et fenêtres publicitaires, pannes matérielles, Windows qui ne démarre plus. Nous diagnostiquons, réparons et vous expliquons ce qui s'est passé.</p>
     </div>
     <div class="card reveal d2">
+      <!-- PHOTO : décommenter quand la photo sera prête (format paysage, ~800x500px, compressée)
+      <img class="card-photo" src="photos/optimisation.jpg" alt="" loading="lazy"> -->
       <div class="ico">⚡</div>
       <h3>Optimisation &amp; mise à niveau</h3>
       <p>Nettoyage complet, passage au SSD, ajout de mémoire, réinstallation propre. Votre machine actuelle retrouve une seconde vie — souvent pour bien moins cher qu'un PC neuf.</p>
     </div>
     <div class="card reveal d3">
+      <!-- PHOTO : décommenter quand la photo sera prête (format paysage, ~800x500px, compressée)
+      <img class="card-photo" src="photos/montage.jpg" alt="" loading="lazy"> -->
       <div class="ico">🖥️</div>
       <h3>Montage PC sur mesure</h3>
-      <p>Gaming, création musicale, graphisme, bureautique intensive : je conçois la configuration adaptée à votre usage et votre budget, je monte, j'installe, et je livre une machine prête à l'emploi.</p>
+      <p>Gaming, création, graphisme, bureautique intensive : nous concevons la configuration adaptée à votre usage et votre budget, nous montons, installons, et livrons une machine prête à l'emploi.</p>
     </div>
     <div class="card reveal d1">
+      <!-- PHOTO : décommenter quand la photo sera prête (format paysage, ~800x500px, compressée)
+      <img class="card-photo" src="photos/installation.jpg" alt="" loading="lazy"> -->
       <div class="ico">🛠️</div>
       <h3>Installation &amp; assistance</h3>
-      <p>Nouveau PC à configurer, imprimante, box, sauvegardes, transfert de données, comptes et messagerie. Et si vous voulez apprendre à faire vous-même, je prends le temps de montrer.</p>
+      <p>Nouveau PC à configurer, imprimante, box, sauvegardes, transfert de données, comptes et messagerie. Et si vous voulez apprendre à faire vous-même, nous prenons le temps de montrer.</p>
     </div>
   </div>
-  <div class="service-banner reveal">
-    <div class="ico">💼</div>
-    <div>
-      <h3>Professionnels &amp; indépendants</h3>
-      <p>Poste de travail qui doit tenir la charge, configuration métier (musique assistée par ordinateur, graphisme, gestion), maintenance ponctuelle sans contrat imposé. Décrivez votre besoin, je chiffre précisément.</p>
+  <div class="pro-head reveal">
+    <span class="eyebrow">Pour les professionnels</span>
+    <h3>Votre outil de travail, sans les mauvaises surprises.</h3>
+    <p>Artisans, indépendants, petites entreprises du Var : un interlocuteur local, une facture pour votre comptabilité, et jamais de contrat imposé.</p>
+  </div>
+  <div class="services-grid">
+    <div class="card reveal d1">
+      <div class="ico">🚑</div>
+      <h3>Dépannage &amp; maintenance</h3>
+      <p>Un poste en panne, c'est une journée de travail perdue. Nous intervenons rapidement sur vos ordinateurs et votre matériel — ponctuellement, sans contrat imposé.</p>
+    </div>
+    <div class="card reveal d2">
+      <div class="ico">🌐</div>
+      <h3>Site web &amp; Google Ads</h3>
+      <p>Création ou optimisation de votre site vitrine, et gestion de campagnes Google Ads pour être trouvé par vos clients locaux. Mis en ligne, expliqué, et vous restez propriétaire de tout.</p>
+    </div>
+    <div class="card reveal d3">
+      <div class="ico">🖥️</div>
+      <h3>Conseil matériel &amp; montage PC</h3>
+      <p>Besoin de renouveler un poste ou d'équiper un bureau ? Nous vous conseillons le bon matériel au bon prix, et nous montons vos PC sur mesure, prêts à travailler.</p>
     </div>
   </div>
 </section>
@@ -511,12 +541,12 @@ a:focus-visible,button:focus-visible,input:focus-visible,textarea:focus-visible{
     <div class="step reveal d2">
       <span class="num">2</span>
       <h3>Diagnostic et devis gratuits</h3>
-      <p>Je vous réponds sous 24 heures avec un diagnostic et un prix ferme. Le devis est gratuit et sans engagement : rien ne démarre sans votre accord.</p>
+      <p>Nous vous répondons sous 24 heures avec un diagnostic et un prix ferme. Le devis est gratuit et sans engagement : rien ne démarre sans votre accord.</p>
     </div>
     <div class="step reveal d3">
       <span class="num">3</span>
       <h3>L'intervention</h3>
-      <p>À votre domicile, à distance, ou je récupère la machine. Vous récupérez un matériel qui fonctionne — et une explication claire de ce qui a été fait.</p>
+      <p>À votre domicile, à distance, ou nous récupérons la machine. Vous récupérez un matériel qui fonctionne — et une explication claire de ce qui a été fait.</p>
     </div>
   </div>
 </section>
@@ -525,15 +555,16 @@ a:focus-visible,button:focus-visible,input:focus-visible,textarea:focus-visible{
 <section id="apropos">
   <div class="about-wrap">
     <div class="about-photo reveal">
-      <img src="photo_loic.png" alt="Loïc, fondateur de Numérique & Vous" width="600" height="600">
-      <span class="tag">Loïc — votre informaticien</span>
+      <!-- TODO : remplacer par une photo de l'équipe (Loïc + Labir) quand elle sera prête -->
+      <img src="photo_loic.png" alt="Loïc, co-fondateur de Numérique & Vous" width="600" height="600">
+      <span class="tag">Loïc — co-fondateur</span>
     </div>
     <div class="about-text reveal d1">
-      <span class="eyebrow">Qui suis-je</span>
-      <h2>Un visage, pas une <span class="hl">hotline</span>.</h2>
-      <p class="lead">Je m'appelle Loïc, je suis basé à Ollioules. Vous parlez à la personne qui diagnostique, qui répare et qui répond au téléphone — pas à un centre d'appel qui sous-traite.</p>
+      <span class="eyebrow">Qui sommes-nous</span>
+      <h2>Des visages, pas une <span class="hl">hotline</span>.</h2>
+      <p class="lead">Nous sommes Loïc et Labir, basés sur Toulon. Pas de hotline, pas de machine à rappeler dans les 48 heures : nous nous déplaçons directement chez vous, et la personne qui vient est celle qui répare.</p>
       <ul class="about-points">
-        <li>Le prix du devis est le prix payé — aucun supplément découvert en cours de route</li>
+        <li>Nous nous déplaçons à domicile, sur Toulon, Ollioules et les communes voisines</li>
         <li>Des explications en français clair : vous comprenez ce qui a été fait et pourquoi</li>
         <li>Entreprise déclarée, facture remise à chaque intervention</li>
       </ul>
@@ -546,13 +577,13 @@ a:focus-visible,button:focus-visible,input:focus-visible,textarea:focus-visible{
   <div class="section-head reveal">
     <span class="eyebrow">Combien ça coûte</span>
     <h2>Un prix <span class="hl">ferme</span>, établi sur devis.</h2>
-    <p class="lead">Un virus à supprimer, un SSD à installer et une tour complète à monter n'ont pas le même prix — un tarif unique affiché serait forcément faux. Je chiffre votre demande précisément, gratuitement, sous 24 heures.</p>
+    <p class="lead">Un virus à supprimer, un SSD à installer et une tour complète à monter n'ont pas le même prix — un tarif unique affiché serait forcément faux. Nous chiffrons votre demande précisément, gratuitement, sous 24 heures.</p>
   </div>
   <div class="services-grid">
     <div class="card reveal d1">
       <div class="ico">🆓</div>
       <h3>Devis gratuit et rapide</h3>
-      <p>Vous décrivez le problème, je réponds sous 24 heures avec un prix précis. Demander un devis ne vous engage à rien.</p>
+      <p>Vous décrivez le problème, nous répondons sous 24 heures avec un prix précis. Demander un devis ne vous engage à rien.</p>
     </div>
     <div class="card reveal d2">
       <div class="ico">🔒</div>
@@ -577,27 +608,27 @@ a:focus-visible,button:focus-visible,input:focus-visible,textarea:focus-visible{
   <div class="faq">
     <div class="faq-item reveal">
       <button class="faq-q" aria-expanded="false">Combien coûte un dépannage ?<span class="plus">+</span></button>
-      <div class="faq-a"><p>Cela dépend de la panne, c'est pourquoi je travaille sur devis : vous décrivez le problème, je vous donne un prix ferme sous 24 heures, gratuitement. Le prix annoncé est le prix payé — s'il faut une pièce, elle est chiffrée et validée avec vous avant.</p></div>
+      <div class="faq-a"><p>Cela dépend de la panne, c'est pourquoi nous travaillons sur devis : vous décrivez le problème, nous vous donnons un prix ferme sous 24 heures, gratuitement. Le prix annoncé est le prix payé — s'il faut une pièce, elle est chiffrée et validée avec vous avant.</p></div>
     </div>
     <div class="faq-item reveal">
       <button class="faq-q" aria-expanded="false">Vous déplacez-vous à domicile ?<span class="plus">+</span></button>
-      <div class="faq-a"><p>Oui, j'interviens à domicile à Ollioules, Toulon, La Seyne-sur-Mer, Six-Fours-les-Plages et Sanary-sur-Mer. Selon la panne, je peux aussi intervenir à distance, ou récupérer la machine et vous la rapporter réparée.</p></div>
+      <div class="faq-a"><p>Oui, nous intervenons à domicile à Toulon, Ollioules, La Seyne-sur-Mer, Six-Fours-les-Plages et Sanary-sur-Mer. Selon la panne, nous pouvons aussi intervenir à distance, ou récupérer la machine et vous la rapporter réparée.</p></div>
     </div>
     <div class="faq-item reveal">
       <button class="faq-q" aria-expanded="false">Mes données sont-elles en sécurité ?<span class="plus">+</span></button>
-      <div class="faq-a"><p>Oui. Vos fichiers, photos et mots de passe restent les vôtres : je n'y accède que si l'intervention l'exige, et je vous le dis. Avant toute manipulation risquée — réinstallation, remplacement de disque — une sauvegarde est proposée systématiquement.</p></div>
+      <div class="faq-a"><p>Oui. Vos fichiers, photos et mots de passe restent les vôtres : nous n'y accédons que si l'intervention l'exige, et nous vous le disons. Avant toute manipulation risquée — réinstallation, remplacement de disque — une sauvegarde est proposée systématiquement.</p></div>
     </div>
     <div class="faq-item reveal">
       <button class="faq-q" aria-expanded="false">Comment se passe le montage d'un PC sur mesure ?<span class="plus">+</span></button>
-      <div class="faq-a"><p>Vous me décrivez l'usage (jeu, musique, graphisme, bureautique) et votre budget. Je vous propose une configuration détaillée et chiffrée composant par composant, en toute transparence. Une fois validée, je commande, je monte, j'installe le système et les logiciels, et je livre une machine prête à l'emploi.</p></div>
+      <div class="faq-a"><p>Vous nous décrivez l'usage (jeu, création, graphisme, bureautique) et votre budget. Nous vous proposons une configuration détaillée et chiffrée composant par composant, en toute transparence. Une fois validée, nous commandons, montons, installons le système et les logiciels, et livrons une machine prête à l'emploi.</p></div>
     </div>
     <div class="faq-item reveal">
       <button class="faq-q" aria-expanded="false">Vaut-il mieux réparer ou racheter ?<span class="plus">+</span></button>
-      <div class="faq-a"><p>Je vous le dis honnêtement au moment du diagnostic. Beaucoup de machines « trop lentes » repartent pour des années avec un SSD et un nettoyage, pour une fraction du prix d'un PC neuf. Et quand la réparation ne vaut pas le coup, je vous le dis aussi — quitte à perdre l'intervention.</p></div>
+      <div class="faq-a"><p>Nous vous le disons honnêtement au moment du diagnostic. Beaucoup de machines « trop lentes » repartent pour des années avec un SSD et un nettoyage, pour une fraction du prix d'un PC neuf. Et quand la réparation ne vaut pas le coup, nous vous le disons aussi — quitte à perdre l'intervention.</p></div>
     </div>
     <div class="faq-item reveal">
       <button class="faq-q" aria-expanded="false">Travaillez-vous avec les professionnels ?<span class="plus">+</span></button>
-      <div class="faq-a"><p>Oui : postes de travail, configurations métier (musique assistée par ordinateur, graphisme, gestion), dépannage ponctuel sans contrat de maintenance imposé. Facture fournie pour votre comptabilité.</p></div>
+      <div class="faq-a"><p>Oui : dépannage ponctuel sans contrat de maintenance imposé, conseil matériel et montage de postes sur mesure, création de site web et gestion de campagnes Google Ads. Facture fournie pour votre comptabilité.</p></div>
     </div>
   </div>
 </section>
@@ -619,7 +650,7 @@ a:focus-visible,button:focus-visible,input:focus-visible,textarea:focus-visible{
       <p class="lead" style="margin-bottom:26px">Décrivez votre problème via le formulaire, ou directement par téléphone. Devis gratuit sous 24&nbsp;heures.</p>
       <div class="info-line"><div class="ico">📞</div><a href="tel:+33667062185" onclick="gtag('event','conversion_appel',{event_category:'contact'})">06 67 06 21 85</a></div>
       <div class="info-line"><div class="ico">✉️</div><a href="mailto:numeriquevous@gmail.com">numeriquevous@gmail.com</a></div>
-      <div class="info-line"><div class="ico">📍</div>Ollioules, Toulon et alentours (Var)</div>
+      <div class="info-line"><div class="ico">📍</div>Toulon, Ollioules et alentours (Var)</div>
       <div class="info-line"><div class="ico">🕐</div>Réponse sous 24 heures</div>
     </div>
     <form action="https://formspree.io/f/mrevwaed" method="POST" class="reveal d1">
@@ -650,7 +681,7 @@ a:focus-visible,button:focus-visible,input:focus-visible,textarea:focus-visible{
       </div>
       <div class="field">
         <label for="msg">Décrivez le problème ou le besoin</label>
-        <textarea id="msg" name="message" placeholder="Ex. : Mon PC met 10 minutes à démarrer et se fige souvent… / Je cherche une tour pour faire de la musique, budget 1500 €…" required></textarea>
+        <textarea id="msg" name="message" placeholder="Ex. : Mon PC met 10 minutes à démarrer et se fige souvent… / Besoin d'une tour pour de la création graphique, budget 1500 €…" required></textarea>
       </div>
       <button type="submit" class="btn">Recevoir mon devis gratuit <span class="arr">→</span></button>
       <p style="font-size:.8rem;color:#5b6c7d;margin-top:14px;text-align:center">Vos informations servent uniquement à vous recontacter. Jamais partagées.</p>
@@ -663,7 +694,7 @@ a:focus-visible,button:focus-visible,input:focus-visible,textarea:focus-visible{
   <div class="footer-grid">
     <div>
       <a class="logo" href="#top">Numérique <span class="amp">&amp;</span> <em style="color:var(--miel)">Vous</em></a>
-      <p style="max-width:34ch;margin-top:14px;font-size:1rem">Dépannage, optimisation et montage PC sur mesure à Ollioules, Toulon et alentours.</p>
+      <p style="max-width:34ch;margin-top:14px;font-size:1rem">Dépannage, optimisation et montage PC sur mesure à Toulon, Ollioules et alentours.</p>
     </div>
     <div class="footer-links">
       <strong style="color:var(--ivoire)">Navigation</strong>
@@ -676,7 +707,7 @@ a:focus-visible,button:focus-visible,input:focus-visible,textarea:focus-visible{
       <strong style="color:var(--ivoire)">Contact</strong>
       <a href="tel:+33667062185" onclick="gtag('event','conversion_appel',{event_category:'contact'})">06 67 06 21 85</a>
       <a href="mailto:numeriquevous@gmail.com">numeriquevous@gmail.com</a>
-      <span>Ollioules · Toulon · Var</span>
+      <span>Toulon · Ollioules · Var</span>
     </div>
   </div>
   <div class="footer-bottom">
