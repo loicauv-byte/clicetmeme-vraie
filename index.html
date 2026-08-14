@@ -52,16 +52,18 @@ gtag('js',new Date());gtag('config','AW-18206550386');
 </script>
 <style>
 :root{
-  --blanc:#ffffff;
-  --gris-fond:#f8f9fb;        /* alternance de sections */
-  --encre:#1e1b2e;            /* texte principal + fonds sombres */
-  --gris-texte:#4a4458;       /* texte secondaire */
-  --gris-doux:#6b6480;        /* légendes, notes */
-  --violet:#4c1d95;           /* primaire : eyebrow, liens, titres accentués */
-  --violet-clair:#ede9fe;     /* fonds d'icônes, badges, pastilles */
-  --violet-vif:#7c3aed;       /* CTA UNIQUEMENT */
-  --violet-vif-fonce:#6d28d9; /* hover CTA */
-  --bordure:rgba(30,27,46,.09);
+  --fond:#f2f0f6;             /* fond de page — gris lavande, JAMAIS blanc pur */
+  --fond-alt:#e9e5f0;         /* alternance de sections, un cran plus soutenu */
+  --blanc:#ffffff;            /* cartes et formulaire uniquement */
+  --encre:#1a1046;            /* titres + CTA principal */
+  --aubergine:#58305c;        /* barre supérieure, blocs décoratifs, footer */
+  --aubergine-clair:#6d3d72;
+  --violet:#4c1d95;           /* liens, icônes, eyebrow, puces */
+  --violet-clair:#ede9fe;     /* fonds d'icônes, badges */
+  --violet-vif:#7c3aed;       /* filet d'accent, survols, soulignés — PAS les CTA */
+  --gris-texte:#4a4458;
+  --gris-doux:#6b6480;
+  --bordure:rgba(26,16,70,.10);
   --radius:20px;
   --ease:cubic-bezier(.22,1,.36,1);
 }
@@ -69,26 +71,48 @@ gtag('js',new Date());gtag('config','AW-18206550386');
 html{scroll-behavior:smooth}
 body{
   font-family:'Inter',sans-serif;
-  background:var(--blanc);
+  background:var(--fond);
   color:var(--encre);
   font-size:17px;
   line-height:1.65;
   overflow-x:hidden;
 }
 ::selection{background:var(--violet-clair);color:var(--encre)}
-.bg-alt{background:var(--gris-fond)}
+.bg-alt{background:var(--fond-alt)}
 
 /* ---------- Barre de progression ---------- */
-.progress{position:fixed;top:0;left:0;height:4px;background:linear-gradient(90deg,var(--violet),var(--violet-vif));width:0%;z-index:1001}
+.progress{position:fixed;top:0;left:0;height:4px;background:linear-gradient(90deg,var(--aubergine),var(--violet-vif));width:0%;z-index:1002}
+
+/* ---------- Barre supérieure ---------- */
+.topbar{
+  position:fixed;top:0;left:0;right:0;z-index:1000;
+  display:flex;justify-content:space-between;align-items:center;gap:20px;
+  background:var(--aubergine);color:rgba(255,255,255,.92);
+  padding:11px clamp(20px,5vw,60px);
+  font-size:.88rem;font-weight:500;
+  border-bottom:2px solid var(--violet-vif);
+  transition:transform .4s var(--ease),opacity .3s;
+}
+.topbar a{color:#fff;text-decoration:none;font-weight:600;transition:color .3s}
+.topbar a:hover{color:#d8b4fe}
+.topbar-left,.topbar-right{display:flex;align-items:center;gap:26px}
+.topbar-label{color:rgba(255,255,255,.72);font-weight:500}
+.topbar-cta{display:inline-flex;align-items:center;gap:7px}
+.topbar-cta .arr{transition:transform .3s var(--ease)}
+.topbar-cta:hover .arr{transform:translateX(4px)}
+.topbar-sep{color:rgba(255,255,255,.72);font-weight:500;padding-left:26px;border-left:1px solid rgba(255,255,255,.22)}
+.topbar.hidden{transform:translateY(-100%);opacity:0}
+@media (max-width:1000px){.topbar{display:none}}
 
 /* ---------- Header ---------- */
 header{
-  position:fixed;top:0;left:0;right:0;z-index:1000;
+  position:fixed;top:44px;left:0;right:0;z-index:1000;
   display:flex;justify-content:space-between;align-items:center;
   padding:22px clamp(20px,5vw,60px);
-  transition:background .4s,box-shadow .4s,padding .4s;
+  transition:background .4s,box-shadow .4s,padding .4s,top .4s var(--ease);
 }
-header.scrolled{background:rgba(255,255,255,.92);backdrop-filter:blur(12px);box-shadow:0 2px 24px rgba(30,27,46,.08);padding:14px clamp(20px,5vw,60px)}
+header.scrolled{background:rgba(242,240,246,.94);backdrop-filter:blur(12px);box-shadow:0 2px 24px rgba(30,27,46,.08);padding:14px clamp(20px,5vw,60px);top:0}
+@media (max-width:1000px){header{top:0}}
 .logo{font-family:'Archivo',sans-serif;font-weight:700;font-size:1.35rem;color:var(--encre);text-decoration:none;letter-spacing:-.02em}
 .logo em{font-style:normal;color:var(--violet)}
 .logo .amp{color:var(--violet);font-style:italic}
@@ -99,14 +123,18 @@ header.scrolled{background:rgba(255,255,255,.92);backdrop-filter:blur(12px);box-
 .nav-desktop a:not(.btn):hover::after{transform:scaleX(1);transform-origin:left}
 .btn{
   display:inline-flex;align-items:center;gap:10px;
-  background:var(--violet);color:#fff !important;padding:14px 28px;border-radius:100px;
+  background:var(--encre);color:#fff !important;padding:14px 28px;border-radius:100px;
   font-weight:700;font-size:1rem;text-decoration:none;border:none;cursor:pointer;
   transition:transform .3s var(--ease),box-shadow .3s,background .3s;
-  box-shadow:0 6px 20px rgba(76,29,149,.26);
+  box-shadow:0 6px 20px rgba(26,16,70,.22);
 }
-.btn:hover{transform:translateY(-3px) scale(1.02);box-shadow:0 12px 30px rgba(76,29,149,.34);background:#3b1578}
-.btn.gold{background:var(--violet-vif);color:#fff !important;box-shadow:0 6px 20px rgba(124,58,237,.35)}
-.btn.gold:hover{background:var(--violet-vif-fonce);color:#fff !important}
+.btn:hover{transform:translateY(-3px) scale(1.02);box-shadow:0 12px 28px rgba(26,16,70,.30);background:#2a1a63}
+.btn.gold{background:var(--encre);color:#fff !important;box-shadow:0 8px 24px rgba(26,16,70,.26)}
+.btn.gold:hover{background:#2a1a63;color:#fff !important}
+.btn.ghost{background:transparent;color:var(--violet) !important;border:2px solid var(--violet);box-shadow:none}
+.btn.ghost:hover{background:var(--violet);color:#fff !important;transform:translateY(-3px)}
+.btn.on-dark{background:#fff;color:var(--encre) !important}
+.btn.on-dark:hover{background:#fff;color:var(--encre) !important;transform:translateY(-3px) scale(1.02)}
 .btn .arr{transition:transform .3s var(--ease)}
 .btn:hover .arr{transform:translateX(5px)}
 
@@ -130,14 +158,14 @@ header.scrolled{background:rgba(255,255,255,.92);backdrop-filter:blur(12px);box-
 
 /* menu overlay plein écran */
 .menu-overlay{
-  position:fixed;inset:0;background:var(--encre);z-index:1001;
+  position:fixed;inset:0;background:linear-gradient(160deg,#2e1065,#1a1046);z-index:1001;
   display:flex;flex-direction:column;justify-content:center;padding:0 clamp(24px,8vw,90px);
   clip-path:circle(0% at calc(100% - 48px) 40px);
   transition:clip-path .7s var(--ease);
 }
 .menu-overlay.open{clip-path:circle(150% at calc(100% - 48px) 40px)}
 .menu-overlay a{
-  font-family:'Archivo',sans-serif;color:var(--gris-fond);text-decoration:none;
+  font-family:'Archivo',sans-serif;color:var(--fond);text-decoration:none;
   font-size:clamp(2rem,7vw,3.4rem);font-weight:600;padding:10px 0;
   opacity:0;transform:translateY(30px);transition:opacity .5s,transform .5s var(--ease),color .3s;
 }
@@ -154,14 +182,19 @@ header.scrolled{background:rgba(255,255,255,.92);backdrop-filter:blur(12px);box-
 /* ---------- Hero ---------- */
 .hero{
   min-height:100svh;display:flex;flex-direction:column;justify-content:center;
-  padding:120px clamp(20px,6vw,80px) 60px;position:relative;overflow:hidden;
+  padding:164px clamp(20px,6vw,80px) 60px;position:relative;overflow:hidden;
 }
+@media (max-width:1000px){.hero{padding-top:120px}}
+.hero-deco{position:absolute;background:var(--aubergine);pointer-events:none;z-index:0;opacity:.10}
+.hero-deco.d-a{width:min(38vw,520px);height:min(38vw,520px);top:-60px;right:-80px;border-radius:0 0 0 120px}
+.hero-deco.d-b{width:min(26vw,320px);height:min(26vw,320px);bottom:-90px;right:14vw;border-radius:120px 0 0 0;opacity:.06}
+@media (max-width:900px){.hero-deco{display:none}}
 .hero h1,.hero p,.hero-ctas,.hero-note{position:relative;z-index:2}
 .eyebrow{
   display:inline-flex;align-items:center;gap:10px;font-weight:700;font-size:.82rem;
   letter-spacing:.14em;text-transform:uppercase;color:var(--violet);margin-bottom:26px;
 }
-.eyebrow::before{content:'';width:34px;height:2px;background:var(--violet)}
+.eyebrow::before{content:'';width:34px;height:2px;background:var(--violet-vif)}
 .hero h1{
   font-family:'Archivo',sans-serif;font-weight:700;letter-spacing:-.025em;
   font-size:clamp(2.6rem,7.2vw,5.4rem);line-height:1.04;max-width:15ch;
@@ -183,7 +216,7 @@ header.scrolled{background:rgba(255,255,255,.92);backdrop-filter:blur(12px);box-
 .trust-badges{display:flex;flex-wrap:wrap;gap:10px;margin-top:26px;position:relative;z-index:2}
 .trust-badge{
   display:inline-flex;align-items:center;gap:8px;
-  background:var(--violet-clair);color:var(--violet);
+  background:#fff;color:var(--violet);border:1px solid rgba(76,29,149,.16);
   padding:9px 18px;border-radius:100px;
   font-size:.88rem;font-weight:600;letter-spacing:.01em;
 }
@@ -199,12 +232,12 @@ header.scrolled{background:rgba(255,255,255,.92);backdrop-filter:blur(12px);box-
 
 /* ---------- Marquee communes ---------- */
 .marquee{
-  background:var(--encre);color:var(--gris-fond);overflow:hidden;padding:18px 0;
+  background:var(--encre);color:var(--fond);overflow:hidden;padding:18px 0;
 }
 .marquee-track{display:flex;gap:0;white-space:nowrap;animation:scrollx 26s linear infinite;width:max-content}
 .marquee:hover .marquee-track{animation-play-state:paused}
 .marquee-track span{font-family:'Archivo',sans-serif;font-size:1.25rem;padding:0 26px;display:inline-flex;align-items:center;gap:26px}
-.marquee-track .dot{color:var(--violet-clair)}
+.marquee-track .dot{color:#a78bfa}
 @keyframes scrollx{to{transform:translateX(-50%)}}
 
 /* ---------- Sections communes ---------- */
@@ -212,7 +245,7 @@ section{padding:clamp(70px,10vw,130px) clamp(20px,6vw,80px);position:relative}
 .section-head{max-width:760px;margin-bottom:clamp(40px,6vw,70px)}
 h2{font-family:'Archivo',sans-serif;font-weight:700;font-size:clamp(2rem,4.6vw,3.3rem);letter-spacing:-.02em;line-height:1.1;margin:14px 0 18px}
 h2 .hl{position:relative;white-space:nowrap}
-h2 .hl::after{content:'';position:absolute;left:-2%;bottom:6%;width:104%;height:34%;background:rgba(124,58,237,.16);z-index:-1;transform:scaleX(0);transform-origin:left;transition:transform .8s var(--ease) .3s;border-radius:4px}
+h2 .hl::after{content:'';position:absolute;left:-2%;bottom:6%;width:104%;height:34%;background:rgba(124,58,237,.20);z-index:-1;transform:scaleX(0);transform-origin:left;transition:transform .8s var(--ease) .3s;border-radius:4px}
 .in-view h2 .hl::after{transform:scaleX(1)}
 .lead{color:var(--gris-texte);font-size:1.08rem;max-width:58ch}
 
@@ -235,6 +268,12 @@ h2 .hl::after{content:'';position:absolute;left:-2%;bottom:6%;width:104%;height:
   opacity:0;transition:opacity .4s;
 }
 .card:hover::before{opacity:1}
+.card::after{
+  content:'';position:absolute;left:0;top:0;bottom:0;width:4px;
+  background:var(--violet-vif);transform:scaleY(0);transform-origin:top;
+  transition:transform .45s var(--ease);
+}
+.card:hover::after{transform:scaleY(1)}
 .card:hover{transform:translateY(-8px);box-shadow:0 18px 40px rgba(30,27,46,.10)}
 .card .ico{
   width:58px;height:58px;border-radius:16px;background:var(--violet-clair);
@@ -261,8 +300,8 @@ h2 .hl::after{content:'';position:absolute;left:-2%;bottom:6%;width:104%;height:
 .pro-head p{color:var(--gris-texte);font-size:1.05rem;max-width:58ch}
 
 /* ---------- Étapes ---------- */
-.steps{background:var(--encre);color:var(--gris-fond);border-radius:clamp(24px,4vw,48px);margin:0 clamp(12px,3vw,40px)}
-.steps h2,.steps .lead{color:var(--gris-fond)}
+.steps{background:linear-gradient(150deg,#4c1d95 0%,#2e1065 100%);color:var(--fond);border-radius:clamp(24px,4vw,48px);margin:0 clamp(12px,3vw,40px)}
+.steps h2,.steps .lead{color:var(--fond)}
 .steps .lead{color:rgba(248,249,251,.75)}
 .steps .eyebrow{color:var(--violet-clair)}
 .steps .eyebrow::before{background:var(--violet-clair)}
@@ -271,9 +310,9 @@ h2 .hl::after{content:'';position:absolute;left:-2%;bottom:6%;width:104%;height:
   background:rgba(248,249,251,.05);border:1px solid rgba(248,249,251,.12);
   border-radius:var(--radius);padding:34px 28px;transition:background .4s,transform .45s var(--ease),border-color .4s;
 }
-.step:hover{background:rgba(248,249,251,.1);transform:translateY(-6px);border-color:var(--violet-clair)}
+.step:hover{background:rgba(248,249,251,.1);transform:translateY(-6px);border-color:#a78bfa}
 .step .num{
-  font-family:'Archivo',sans-serif;font-size:3rem;font-weight:700;color:var(--violet-clair);line-height:1;margin-bottom:16px;display:block;
+  font-family:'Archivo',sans-serif;font-size:3rem;font-weight:700;color:#c4b5fd;line-height:1;margin-bottom:16px;display:block;
 }
 .step h3{font-family:'Archivo',sans-serif;font-size:1.25rem;margin-bottom:10px}
 .step p{font-size:1rem;color:rgba(248,249,251,.92)}
@@ -286,7 +325,7 @@ h2 .hl::after{content:'';position:absolute;left:-2%;bottom:6%;width:104%;height:
   transition:transform .45s var(--ease),box-shadow .45s,border-color .45s;
 }
 .price-card:hover{transform:translateY(-10px);box-shadow:0 28px 60px rgba(30,27,46,.15)}
-.price-card.featured{border-color:var(--violet-vif);border-width:2px;background:linear-gradient(180deg,#faf8ff,#f3efff);position:relative}
+.price-card.featured{border-color:var(--violet-vif);border-width:2px;background:linear-gradient(180deg,#fbfaff,#f4f0ff);position:relative}
 .price-card.featured .badge{
   position:absolute;top:-16px;left:50%;transform:translateX(-50%);
   background:var(--violet-vif);color:#fff;font-weight:800;font-size:1rem;letter-spacing:.08em;text-transform:uppercase;
@@ -349,11 +388,11 @@ h2 .hl::after{content:'';position:absolute;left:-2%;bottom:6%;width:104%;height:
 form{background:var(--blanc);border-radius:var(--radius);padding:clamp(28px,4vw,44px);border:1px solid rgba(30,27,46,.08);box-shadow:0 16px 40px rgba(30,27,46,.06)}
 .field{margin-bottom:20px;position:relative}
 .field label{display:block;font-weight:700;font-size:1rem;margin-bottom:8px;letter-spacing:.02em}
-.field select{width:100%;padding:15px 18px;border-radius:14px;border:1.5px solid rgba(30,27,46,.15);font-family:'Inter',sans-serif;font-size:1rem;background:var(--gris-fond);color:var(--encre);transition:border-color .3s,box-shadow .3s,background .3s;appearance:none;background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='14' height='9'%3E%3Cpath d='M1 1l6 6 6-6' stroke='%234c1d95' stroke-width='2' fill='none' stroke-linecap='round'/%3E%3C/svg%3E");background-repeat:no-repeat;background-position:right 18px center;cursor:pointer}
+.field select{width:100%;padding:15px 18px;border-radius:14px;border:1.5px solid rgba(30,27,46,.15);font-family:'Inter',sans-serif;font-size:1rem;background:var(--fond);color:var(--encre);transition:border-color .3s,box-shadow .3s,background .3s;appearance:none;background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='14' height='9'%3E%3Cpath d='M1 1l6 6 6-6' stroke='%234c1d95' stroke-width='2' fill='none' stroke-linecap='round'/%3E%3C/svg%3E");background-repeat:no-repeat;background-position:right 18px center;cursor:pointer}
 .field select:focus{outline:none;border-color:var(--violet);background-color:#fff;box-shadow:0 0 0 4px rgba(76,29,149,.12)}
 .field input,.field textarea{
   width:100%;padding:15px 18px;border-radius:14px;border:1.5px solid rgba(30,27,46,.15);
-  font-family:'Inter',sans-serif;font-size:1rem;background:var(--gris-fond);color:var(--encre);
+  font-family:'Inter',sans-serif;font-size:1rem;background:var(--fond);color:var(--encre);
   transition:border-color .3s,box-shadow .3s,background .3s;
 }
 .field input:focus,.field textarea:focus{outline:none;border-color:var(--violet);background:#fff;box-shadow:0 0 0 4px rgba(76,29,149,.12)}
@@ -362,16 +401,16 @@ form .btn{width:100%;justify-content:center;font-size:1.05rem;padding:17px}
 
 /* ---------- Footer ---------- */
 footer{
-  background:var(--encre);color:rgba(248,249,251,.88);
+  background:var(--aubergine);color:rgba(255,255,255,.88);
   padding:60px clamp(20px,6vw,80px) 34px;margin-top:20px;
 }
-.footer-grid{display:flex;justify-content:space-between;gap:40px;flex-wrap:wrap;padding-bottom:40px;border-bottom:1px solid rgba(248,249,251,.14)}
-footer .logo{color:var(--gris-fond);font-size:1.5rem}
+.footer-grid{display:flex;justify-content:space-between;gap:40px;flex-wrap:wrap;padding-bottom:40px;border-bottom:1px solid rgba(255,255,255,.18)}
+footer .logo{color:var(--fond);font-size:1.5rem}
 footer .logo .amp{color:var(--violet-clair)}
-footer a{color:rgba(248,249,251,.88);text-decoration:none;transition:color .3s}
-footer a:hover{color:#c4b5fd}
+footer a{color:rgba(255,255,255,.88);text-decoration:none;transition:color .3s}
+footer a:hover{color:#e9d5ff}
 .footer-links{display:flex;flex-direction:column;gap:10px;font-size:1rem}
-.footer-bottom{display:flex;justify-content:space-between;gap:16px;flex-wrap:wrap;padding-top:26px;font-size:.82rem;color:rgba(248,249,251,.5)}
+.footer-bottom{display:flex;justify-content:space-between;gap:16px;flex-wrap:wrap;padding-top:26px;font-size:.82rem;color:rgba(255,255,255,.55)}
 
 /* ---------- Accessibilité / responsive ---------- */
 a:focus-visible,button:focus-visible,input:focus-visible,textarea:focus-visible{outline:3px solid var(--violet-vif);outline-offset:3px}
@@ -391,6 +430,18 @@ a:focus-visible,button:focus-visible,input:focus-visible,textarea:focus-visible{
 <body>
 
 <div class="progress" id="progress"></div>
+
+<div class="topbar" id="topbar">
+  <div class="topbar-left">
+    <span class="topbar-label">Un problème informatique&nbsp;?</span>
+    <a href="#contact" class="topbar-cta">Demander un devis <span class="arr">→</span></a>
+  </div>
+  <div class="topbar-right">
+    <a href="tel:+33667062185" onclick="gtag('event','conversion_appel',{event_category:'contact'})">06&nbsp;67&nbsp;06&nbsp;21&nbsp;85</a>
+    <a href="mailto:numeriquevous@gmail.com">numeriquevous@gmail.com</a>
+    <span class="topbar-sep">Réponse sous 24&nbsp;h</span>
+  </div>
+</div>
 
 <header id="header">
   <a class="logo" href="#top">Numérique <span class="amp">&amp;</span> <em>Vous</em></a>
@@ -422,13 +473,15 @@ a:focus-visible,button:focus-visible,input:focus-visible,textarea:focus-visible{
 
 <!-- ================= HERO ================= -->
 <section class="hero" id="top">
+  <div class="hero-deco d-a"></div>
+  <div class="hero-deco d-b"></div>
   <span class="eyebrow">Service informatique local · Toulon & Ollioules</span>
   <h1>Un problème informatique ?<br><span class="type-wrap"><span id="typed">pc lent au démarrage</span><span class="caret"></span></span></h1>
   <p>Dépannage, optimisation, montage de PC sur mesure — à domicile ou à distance, pour particuliers et professionnels. Vous décrivez le problème, je vous envoie un devis gratuit, et rien ne démarre sans votre accord.</p>
   <div class="hero-ctas">
     <a href="#contact" class="btn gold">Demander mon devis gratuit <span class="arr">→</span></a>
-    <a href="tel:+33667062185" class="btn" style="background:var(--encre)" onclick="gtag('event','conversion_appel',{event_category:'contact'})">📞 06 67 06 21 85</a>
-    <a href="#methode" class="btn" style="background:transparent;color:var(--encre) !important;border:2px solid var(--encre);box-shadow:none">Voir comment ça marche</a>
+    <a href="tel:+33667062185" class="btn" onclick="gtag('event','conversion_appel',{event_category:'contact'})">📞 06 67 06 21 85</a>
+    <a href="#methode" class="btn ghost">Voir comment ça marche</a>
   </div>
   <p class="hero-note"><strong>Diagnostic et devis gratuits</strong> — le prix annoncé est le prix payé, sans surprise.</p>
   <div class="trust-badges">
@@ -620,7 +673,7 @@ a:focus-visible,button:focus-visible,input:focus-visible,textarea:focus-visible{
   <span class="eyebrow">Ça ne coûte rien de demander</span>
   <h2>Décrivez votre problème, recevez un devis gratuit.</h2>
   <p>Deux minutes pour décrire les symptômes, une réponse sous 24 heures avec un prix ferme. Vous décidez ensuite, sans aucune pression.</p>
-  <a href="#contact" class="btn gold" style="font-size:1.1rem;padding:18px 36px">Demander mon devis gratuit <span class="arr">→</span></a>
+  <a href="#contact" class="btn on-dark" style="font-size:1.1rem;padding:18px 36px">Demander mon devis gratuit <span class="arr">→</span></a>
 </section>
 
 <!-- ================= CONTACT ================= -->
@@ -680,14 +733,14 @@ a:focus-visible,button:focus-visible,input:focus-visible,textarea:focus-visible{
       <p style="max-width:34ch;margin-top:14px;font-size:1rem">Dépannage, optimisation, montage PC sur mesure et formation IA à Toulon, Ollioules et alentours.</p>
     </div>
     <div class="footer-links">
-      <strong style="color:var(--gris-fond)">Navigation</strong>
+      <strong style="color:var(--fond)">Navigation</strong>
       <a href="#services">Services</a>
       <a href="#methode">Comment ça marche</a>
       <a href="#devis">Devis</a>
       <a href="#faq">Questions fréquentes</a>
     </div>
     <div class="footer-links">
-      <strong style="color:var(--gris-fond)">Contact</strong>
+      <strong style="color:var(--fond)">Contact</strong>
       <a href="tel:+33667062185" onclick="gtag('event','conversion_appel',{event_category:'contact'})">06 67 06 21 85</a>
       <a href="mailto:numeriquevous@gmail.com">numeriquevous@gmail.com</a>
       <span>Toulon · Ollioules · Var</span>
@@ -717,8 +770,10 @@ if(reduceMotion){typedEl.textContent="pc lent au démarrage"}else{typeLoop()}
 /* ===== Header + progress ===== */
 const header=document.getElementById('header');
 const progress=document.getElementById('progress');
+const topbar=document.getElementById('topbar');
 window.addEventListener('scroll',()=>{
   header.classList.toggle('scrolled',window.scrollY>40);
+  if(topbar) topbar.classList.toggle('hidden',window.scrollY>40);
   const h=document.documentElement;
   progress.style.width=(h.scrollTop/(h.scrollHeight-h.clientHeight)*100)+'%';
 },{passive:true});
