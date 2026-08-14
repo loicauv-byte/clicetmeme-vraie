@@ -222,13 +222,6 @@ header.scrolled{background:rgba(242,240,246,.94);backdrop-filter:blur(12px);box-
 }
 .trust-badge::before{content:'✓';font-weight:800;font-size:.8rem}
 @media (max-width:600px){.trust-badge{font-size:.8rem;padding:8px 14px}}
-.scroll-hint{
-  position:absolute;bottom:28px;left:50%;transform:translateX(-50%);
-  display:flex;flex-direction:column;align-items:center;gap:8px;color:var(--gris-doux);font-size:.78rem;letter-spacing:.1em;text-transform:uppercase;
-}
-.scroll-hint .wheel{width:26px;height:42px;border:2px solid var(--gris-doux);border-radius:14px;position:relative}
-.scroll-hint .wheel::after{content:'';position:absolute;top:8px;left:50%;transform:translateX(-50%);width:4px;height:8px;border-radius:4px;background:var(--violet);animation:wheel 1.6s infinite}
-@keyframes wheel{0%{opacity:1;top:8px}70%{opacity:0;top:22px}100%{opacity:0}}
 
 /* ---------- Marquee communes ---------- */
 .marquee{
@@ -490,7 +483,6 @@ a:focus-visible,button:focus-visible,input:focus-visible,textarea:focus-visible{
     <span class="trust-badge">Devis gratuit</span>
     <span class="trust-badge">Prix ferme, sans surprise</span>
   </div>
-  <div class="scroll-hint"><div class="wheel"></div>Défiler</div>
 </section>
 
 <!-- ================= MARQUEE ================= -->
