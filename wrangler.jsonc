@@ -10,5 +10,9 @@
   },
   "compatibility_flags": [
     "nodejs_compat"
+  ],
+  "routes": [
+    { "pattern": "numeriquevous.fr", "custom_domain": true },
+    { "pattern": "www.numeriquevous.fr", "custom_domain": true }
   ]
 }
