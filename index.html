@@ -278,32 +278,6 @@ h2 .hl::after{content:'';position:absolute;left:-2%;bottom:6%;width:104%;height:
 .step h3{font-family:'Archivo',sans-serif;font-size:1.25rem;margin-bottom:10px}
 .step p{font-size:1rem;color:rgba(248,249,251,.92)}
 
-/* ---------- À propos ---------- */
-.about-wrap{display:grid;grid-template-columns:.7fr 1.3fr;gap:clamp(40px,7vw,90px);align-items:center;max-width:1150px;margin:0 auto}
-.about-photo{position:relative;max-width:340px;margin:0 auto}
-.about-photo img{
-  width:100%;display:block;border-radius:50%;aspect-ratio:1/1;object-fit:cover;
-  border:5px solid var(--blanc);
-  box-shadow:0 24px 50px rgba(30,27,46,.2);
-  transition:transform .5s var(--ease);
-}
-.about-photo:hover img{transform:scale(1.04)}
-.about-photo::before{
-  content:'';position:absolute;inset:-14px;
-  border:3px solid var(--violet);border-radius:50%;z-index:-1;
-}
-.about-photo .tag{
-  position:absolute;bottom:6px;left:50%;transform:translateX(-50%);
-  background:var(--violet);color:#fff;white-space:nowrap;
-  padding:12px 22px;border-radius:100px;font-weight:700;font-size:1rem;
-  box-shadow:0 10px 24px rgba(76,29,149,.35);
-}
-.about-text h2{margin-top:0}
-.about-points{list-style:none;margin-top:26px}
-.about-points li{display:flex;gap:14px;align-items:flex-start;padding:10px 0;font-size:1rem}
-.about-points li::before{content:'✓';width:26px;height:26px;border-radius:50%;background:var(--violet-clair);color:var(--violet);font-weight:800;display:flex;align-items:center;justify-content:center;flex-shrink:0;font-size:1rem}
-@media (max-width:900px){.about-wrap{grid-template-columns:1fr}.about-photo{max-width:380px;margin:0 auto}}
-
 /* ---------- Cartes devis (réutilise .card) ---------- */
 .pricing-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(280px,1fr));gap:24px;align-items:stretch}
 .price-card{
@@ -440,7 +414,6 @@ a:focus-visible,button:focus-visible,input:focus-visible,textarea:focus-visible{
 <div class="menu-overlay" id="menu">
   <a href="#services">Services</a>
   <a href="#methode">Comment ça marche</a>
-  <a href="#apropos">Qui suis-je</a>
   <a href="#devis">Devis</a>
   <a href="#faq">Questions fréquentes</a>
   <a href="#contact">Devis gratuit →</a>
@@ -487,7 +460,7 @@ a:focus-visible,button:focus-visible,input:focus-visible,textarea:focus-visible{
       <img class="card-photo" src="photos/depannage.jpg" alt="" loading="lazy"> -->
       <div class="ico">🔧</div>
       <h3>Dépannage &amp; réparation</h3>
-      <p>PC lent, plantages, écran noir, virus et fenêtres publicitaires, Windows qui ne démarre plus. J'interviens aussi sur l'installation d'un nouveau poste, l'imprimante, la box, les sauvegardes et le transfert de vos données. Urgences traitées en soirée et le samedi.</p>
+      <p>PC lent, plantages, écran noir, virus et fenêtres publicitaires, Windows qui ne démarre plus. J'interviens aussi sur l'installation d'un nouveau poste, l'imprimante, les sauvegardes et le transfert de vos données. Urgences traitées en soirée et le samedi.</p>
     </div>
     <div class="card reveal d2">
       <!-- PHOTO : décommenter quand la photo sera prête (format paysage, ~800x500px, compressée)
@@ -509,6 +482,13 @@ a:focus-visible,button:focus-visible,input:focus-visible,textarea:focus-visible{
       <div class="ico">🤖</div>
       <h3>Formation &amp; accompagnement IA</h3>
       <p>Prendre en main ChatGPT et les outils d'intelligence artificielle, pour de vrai : rédiger, organiser, gagner du temps sur vos tâches quotidiennes. Une séance adaptée à votre niveau, sans jargon.</p>
+    </div>
+  </div>
+  <div class="service-banner reveal">
+    <div class="ico">💻</div>
+    <div>
+      <h3>PC portable : logiciel oui, casse matérielle non</h3>
+      <p>Lenteur, virus, réinstallation, sauvegarde, transfert de données : j'interviens sur toute la partie logicielle de votre portable. En revanche, je ne répare pas les pannes matérielles (écran, carte mère, connecteur d'alimentation) — ces réparations demandent un atelier spécialisé, et je vous oriente vers la bonne solution dès l'échange.</p>
     </div>
   </div>
   <div class="pro-head reveal">
@@ -561,26 +541,6 @@ a:focus-visible,button:focus-visible,input:focus-visible,textarea:focus-visible{
   </div>
 </section>
 
-<!-- ================= À PROPOS ================= -->
-<section id="apropos">
-  <div class="about-wrap">
-    <div class="about-photo reveal">
-      <img src="photo_loic.png" alt="Loïc, fondateur de Numérique & Vous" width="600" height="600">
-      <span class="tag">Loïc — votre informaticien</span>
-    </div>
-    <div class="about-text reveal d1">
-      <span class="eyebrow">Qui suis-je</span>
-      <h2>Un visage, pas une <span class="hl">hotline</span>.</h2>
-      <p class="lead">Je m'appelle Loïc, je suis basé entre Toulon et Ollioules. Vous parlez à la personne qui diagnostique, qui répare et qui répond au téléphone — pas à un centre d'appel qui sous-traite.</p>
-      <ul class="about-points">
-        <li>Je me déplace à domicile, sur Toulon, Ollioules et les communes voisines</li>
-        <li>Des explications en français clair : vous comprenez ce qui a été fait et pourquoi</li>
-        <li>Entreprise déclarée, facture remise à chaque intervention</li>
-      </ul>
-    </div>
-  </div>
-</section>
-
 <!-- ================= DEVIS ================= -->
 <section id="devis" class="bg-alt">
   <div class="section-head reveal">
@@ -595,9 +555,9 @@ a:focus-visible,button:focus-visible,input:focus-visible,textarea:focus-visible{
       <p>Vous décrivez le problème, je réponds sous 24 heures avec un prix précis. Gratuit pour tout dépannage, réparation ou optimisation, et sans engagement.</p>
     </div>
     <div class="card reveal d2">
-      <div class="ico">🔒</div>
-      <h3>Prix annoncé, prix payé</h3>
-      <p>Le montant du devis est ferme. Si le diagnostic révèle autre chose en cours d'intervention, on en parle avant — jamais de facture gonflée à la fin.</p>
+      <div class="ico">🧩</div>
+      <h3>Étude de configuration PC : 30 €</h3>
+      <p>Concevoir une machine sur mesure demande plusieurs heures de recherche et de comparaison de composants. Cette étude est facturée 30 €, <strong>intégralement déduits</strong> si vous me confiez le montage.</p>
     </div>
     <div class="card reveal d3">
       <div class="ico">✋</div>
@@ -605,9 +565,9 @@ a:focus-visible,button:focus-visible,input:focus-visible,textarea:focus-visible{
       <p>Aucune intervention, aucun achat de matériel, aucun remplacement de pièce sans votre validation écrite ou orale. Vous gardez la main du début à la fin.</p>
     </div>
     <div class="card reveal d1">
-      <div class="ico">🧩</div>
-      <h3>Étude de configuration PC : 30 €</h3>
-      <p>Concevoir une machine sur mesure demande plusieurs heures de recherche et de comparaison de composants. Cette étude est facturée 30 €, <strong>intégralement déduits</strong> si vous me confiez le montage.</p>
+      <div class="ico">🔒</div>
+      <h3>Prix annoncé, prix payé</h3>
+      <p>Le montant du devis est ferme. Si le diagnostic révèle autre chose en cours d'intervention, on en parle avant — jamais de facture gonflée à la fin.</p>
     </div>
   </div>
   <p class="pricing-note" style="margin-top:34px"><a href="#contact" class="btn gold" style="font-size:1.05rem">Décrire mon besoin et recevoir un devis <span class="arr">→</span></a></p>
