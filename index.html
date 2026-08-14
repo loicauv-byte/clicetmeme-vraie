@@ -189,16 +189,15 @@ header.scrolled{background:rgba(242,240,246,.94);backdrop-filter:blur(12px);box-
 .hero-deco.d-a{width:min(38vw,520px);height:min(38vw,520px);top:-60px;right:-80px;border-radius:0 0 0 120px}
 .hero-deco.d-b{width:min(26vw,320px);height:min(26vw,320px);bottom:-90px;right:14vw;border-radius:120px 0 0 0;opacity:.06}
 @media (max-width:900px){.hero-deco{display:none}}
-.hero-grid{position:relative;z-index:2;display:grid;grid-template-columns:1.05fr .95fr;gap:clamp(30px,5vw,70px);align-items:center}
-.hero-visual{position:relative}
+.hero-grid{position:relative;z-index:2;display:grid;grid-template-columns:1.35fr .65fr;gap:clamp(30px,5vw,70px);align-items:center}
+.hero-visual{position:relative;max-width:340px;margin:0 auto}
 .hero-visual img{
-  width:100%;display:block;aspect-ratio:3/2;object-fit:cover;border-radius:28px;
-  box-shadow:0 30px 60px rgba(26,16,70,.25);
+  width:100%;display:block;aspect-ratio:3/2;object-fit:cover;border-radius:24px;
+  box-shadow:0 22px 46px rgba(26,16,70,.22);
 }
-.hero-visual::before{content:'';position:absolute;inset:-14px;border:2px solid var(--violet-vif);border-radius:36px;opacity:.35;z-index:-1}
+.hero-visual::before{content:'';position:absolute;inset:-14px;border:2px solid var(--violet-vif);border-radius:32px;opacity:.35;z-index:-1}
 @media (max-width:960px){
   .hero-grid{grid-template-columns:1fr}
-  .hero-visual{max-width:440px;margin:0 auto}
 }
 .eyebrow{
   display:inline-flex;align-items:center;gap:10px;font-weight:700;font-size:.82rem;
@@ -382,13 +381,13 @@ h2 .hl::after{content:'';position:absolute;left:-2%;bottom:6%;width:104%;height:
 .cta-final .eyebrow::before{background:var(--violet-clair)}
 
 /* ---------- Formulaire ---------- */
-.contact-wrap{display:grid;grid-template-columns:1fr 1.1fr;gap:clamp(40px,6vw,80px);align-items:start}
+.contact-wrap{display:grid;grid-template-columns:1fr 1.1fr;gap:clamp(40px,6vw,80px);align-items:center}
 .contact-info h2{margin-top:0}
 .contact-info .info-line{display:flex;gap:16px;align-items:center;padding:16px 0;border-bottom:1px dashed rgba(30,27,46,.12);font-weight:600}
 .contact-info .info-line .ico{width:46px;height:46px;border-radius:14px;background:var(--violet-clair);display:flex;align-items:center;justify-content:center;font-size:1.2rem;flex-shrink:0}
 .contact-info .info-line a{color:var(--encre);text-decoration:none}
 .contact-info .info-line a:hover{color:var(--violet)}
-.contact-visual{margin-top:26px}
+.contact-visual{margin-top:26px;max-width:300px}
 .contact-visual img{
   width:100%;display:block;aspect-ratio:850/523;object-fit:cover;border-radius:var(--radius);
   box-shadow:0 20px 45px rgba(26,16,70,.18);
