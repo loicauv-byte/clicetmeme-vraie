@@ -12,12 +12,11 @@
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Archivo:wght@500;600;700;800&family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@500;600&display=swap" rel="stylesheet">
-<!-- Google Ads -->
-<script async src="https://www.googletagmanager.com/gtag/js?id=AW-18206550386"></script>
+<!-- Google Ads (chargement différé : gtag.js n'est injecté qu'après consentement, voir cookie-consent.js) -->
 <script>
 window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments)}
-gtag('js',new Date());gtag('config','AW-18206550386');
 </script>
+<link rel="stylesheet" href="/cookie-consent.css">
 <style>
 :root{
   --fond:#f2f0f6;             /* fond de page — gris lavande, JAMAIS blanc pur */
@@ -292,7 +291,7 @@ a:focus-visible,button:focus-visible,input:focus-visible,textarea:focus-visible{
     <p>Vous disposez d'un droit d'accès, de rectification, d'effacement, d'opposition et de portabilité de vos données. Pour l'exercer : <a href="mailto:numeriquevous@gmail.com" style="color:var(--violet)">numeriquevous@gmail.com</a>. Vous pouvez également introduire une réclamation auprès de la CNIL (<a href="https://www.cnil.fr" style="color:var(--violet)" target="_blank" rel="noopener">www.cnil.fr</a>).</p>
 
     <h3>Cookies</h3>
-    <p>Ce site utilise des cookies de suivi publicitaire (Google Ads) permettant de mesurer l'efficacité de nos annonces. Ils ne sont déposés qu'après votre consentement explicite. Vous pouvez retirer votre consentement à tout moment via les paramètres de votre navigateur.</p>
+    <p>Ce site utilise des cookies de suivi publicitaire (Google Ads) permettant de mesurer l'efficacité de nos annonces. Ils ne sont déposés qu'après votre consentement explicite. Vous pouvez modifier votre choix à tout moment via le lien « Gérer mes cookies » en bas de page.</p>
   </div>
 </section>
 
@@ -321,6 +320,7 @@ a:focus-visible,button:focus-visible,input:focus-visible,textarea:focus-visible{
     <span>© 2026 Numérique &amp; Vous — SIRET 939 882 957 00029</span>
     <span>Auto-entrepreneur · Ollioules (83)</span>
     <a href="/mentions-legales" class="footer-legal">Mentions légales</a>
+    <a href="#" class="footer-legal cookie-manage">Gérer mes cookies</a>
   </div>
 </footer>
 
@@ -355,5 +355,6 @@ const io=new IntersectionObserver(entries=>{
 },{threshold:.15});
 document.querySelectorAll('.reveal, .section-head').forEach(el=>io.observe(el));
 </script>
+<script defer src="/cookie-consent.js"></script>
 </body>
 </html>

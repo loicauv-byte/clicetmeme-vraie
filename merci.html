@@ -34,14 +34,15 @@
   footer span { color: var(--miel); }
   footer a { color: inherit; text-decoration: underline; }
 </style>
-<script async src="https://www.googletagmanager.com/gtag/js?id=AW-18206550386"></script>
+<!-- Google Ads (chargement différé : gtag.js n'est injecté qu'après consentement, voir cookie-consent.js) -->
 <script>
   window.dataLayer = window.dataLayer || [];
   function gtag(){dataLayer.push(arguments);}
-  gtag('js', new Date());
-  gtag('config', 'AW-18206550386');
-  gtag('event', 'conversion', {'send_to': 'AW-18206550386/cRvxCP2D1skcEPLSx-lD', 'value': 50.0, 'currency': 'EUR'});
+  window.__nvAdsAfterLoad = function(){
+    gtag('event', 'conversion', {'send_to': 'AW-18206550386/cRvxCP2D1skcEPLSx-lD', 'value': 50.0, 'currency': 'EUR'});
+  };
 </script>
+<link rel="stylesheet" href="/cookie-consent.css">
 </head>
 <body>
 <header>
@@ -60,7 +61,8 @@
   </div>
 </main>
 <footer>
-  <p>© 2026 <span>Numérique &amp; Vous</span> · Ollioules, Toulon &amp; environs — <a href="/mentions-legales">Mentions légales</a></p>
+  <p>© 2026 <span>Numérique &amp; Vous</span> · Ollioules, Toulon &amp; environs — <a href="/mentions-legales">Mentions légales</a> · <a href="#" class="cookie-manage">Gérer mes cookies</a></p>
 </footer>
+<script defer src="/cookie-consent.js"></script>
 </body>
 </html>

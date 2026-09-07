@@ -30,13 +30,12 @@
   a.link{display:block;margin-top:18px;color:var(--vert);font-weight:600;text-decoration:none}
   a.link:hover{color:var(--miel)}
 </style>
-<script async src="https://www.googletagmanager.com/gtag/js?id=AW-18206550386"></script>
+<!-- Google Ads (chargement différé : gtag.js n'est injecté qu'après consentement, voir cookie-consent.js) -->
 <script>
   window.dataLayer = window.dataLayer || [];
   function gtag(){dataLayer.push(arguments);}
-  gtag('js', new Date());
-  gtag('config', 'AW-18206550386');
 </script>
+<link rel="stylesheet" href="/cookie-consent.css">
 </head>
 <body>
   <div class="card">
@@ -46,5 +45,6 @@
     <a href="tel:+33667062185" class="link" onclick="gtag('event','conversion_appel',{event_category:'contact'})">Ou appelez directement le 06 67 06 21 85</a>
     <a href="/mentions-legales" class="link" style="margin-top:8px;font-weight:500;font-size:.85rem;color:#5b6c7d">Mentions légales</a>
   </div>
+  <script defer src="/cookie-consent.js"></script>
 </body>
 </html>

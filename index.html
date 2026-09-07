@@ -44,12 +44,11 @@
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Archivo:wght@500;600;700;800&family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@500;600&display=swap" rel="stylesheet">
-<!-- Google Ads -->
-<script async src="https://www.googletagmanager.com/gtag/js?id=AW-18206550386"></script>
+<!-- Google Ads (chargement différé : gtag.js n'est injecté qu'après consentement, voir cookie-consent.js) -->
 <script>
 window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments)}
-gtag('js',new Date());gtag('config','AW-18206550386');
 </script>
+<link rel="stylesheet" href="/cookie-consent.css">
 <style>
 :root{
   --fond:#f2f0f6;             /* fond de page — gris lavande, JAMAIS blanc pur */
@@ -744,6 +743,7 @@ a:focus-visible,button:focus-visible,input:focus-visible,textarea:focus-visible{
     <span>© 2026 Numérique &amp; Vous — SIRET 939 882 957 00029</span>
     <span>Auto-entrepreneur · Ollioules (83)</span>
     <a href="/mentions-legales" class="footer-legal">Mentions légales</a>
+    <a href="#" class="footer-legal cookie-manage">Gérer mes cookies</a>
   </div>
 </footer>
 
@@ -825,5 +825,6 @@ document.querySelectorAll('.faq-q').forEach(btn=>{
 const track=document.getElementById('marqueeTrack');
 track.innerHTML+=track.innerHTML;
 </script>
+<script defer src="/cookie-consent.js"></script>
 </body>
 </html>
