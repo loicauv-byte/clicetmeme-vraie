@@ -58,14 +58,13 @@
   ]
 }
 </script>
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Archivo:wght@500;600;700;800&family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@500;600&display=swap" rel="stylesheet">
+<link rel="preload" href="/fonts/archivo-latin-var.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="preload" href="/fonts/inter-latin-var.woff2" as="font" type="font/woff2" crossorigin>
 <!-- Google Ads (chargement différé : gtag.js n'est injecté qu'après consentement, voir cookie-consent.js) -->
 <script>
 window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments)}
 </script>
-<link rel="stylesheet" href="/cookie-consent.css">
+<link rel="stylesheet" href="/cookie-consent.css" media="print" onload="this.media=&#39;all&#39;">
 <link rel="stylesheet" href="/styles.css">
 </head>
 <body>
@@ -380,7 +379,7 @@ window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments)}
 <!-- ================= CTA MOBILE PERSISTANT ================= -->
 <div class="mobile-cta-bar">
   <a href="tel:+33667062185" class="btn ghost small" onclick="gtag('event','conversion_appel',{event_category:'contact'})">📞 Appeler</a>
-  <a href="/contact" class="btn gold small">Demander un audit</a>
+  <a href="/contact" class="btn gold small">Audit gratuit</a>
 </div>
 
 <script defer src="/site.js"></script>
