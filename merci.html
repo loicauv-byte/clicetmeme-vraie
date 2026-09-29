@@ -9,31 +9,6 @@
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Archivo:wght@600;700;800&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
-<style>
-  :root {
-    --ivoire:#f2f5f7;
-    --encre:#152233;
-    --vert:#175d8d;
-    --vert-clair:#e0eaf2;
-    --miel:#e0702a;
-    --miel-fonce:#b95818;
-  }
-  * { margin: 0; padding: 0; box-sizing: border-box; }
-  body { font-family: 'Inter', sans-serif; background: var(--ivoire); color: var(--encre); min-height: 100vh; display: flex; flex-direction: column; }
-  header { background: #fff; padding: 10px 48px; box-shadow: 0 2px 14px rgba(21,34,51,0.08); }
-  .logo-svg { height: 78px; }
-  main { flex: 1; display: flex; align-items: center; justify-content: center; padding: 60px 32px; }
-  .card { max-width: 640px; text-align: center; background: #fff; padding: 60px 40px; border-radius: 22px; box-shadow: 0 20px 50px rgba(21,34,51,0.12); border: 1px solid rgba(21,34,51,.08); }
-  .check { width: 90px; height: 90px; margin: 0 auto 28px; background: var(--vert-clair); color: var(--vert); border-radius: 50%; display: flex; align-items: center; justify-content: center; font-size: 48px; }
-  h1 { font-family: 'Archivo', sans-serif; font-weight: 700; font-size: clamp(1.7rem, 4vw, 2.2rem); color: var(--encre); margin-bottom: 20px; letter-spacing: -.02em; }
-  p { font-size: 18px; line-height: 1.7; color: #3d5166; margin-bottom: 18px; }
-  .highlight { background: var(--vert-clair); padding: 20px 24px; border-radius: 14px; margin: 28px 0; font-size: 16px; color: var(--encre); }
-  .highlight strong { color: var(--vert); }
-  .btn { display: inline-block; background: var(--vert); color: #fff; padding: 16px 34px; border-radius: 100px; text-decoration: none; font-weight: 700; font-family: 'Archivo', sans-serif; margin-top: 20px; }
-  footer { background: var(--encre); color: rgba(242,245,247,0.5); text-align: center; padding: 24px; font-size: 13px; }
-  footer span { color: var(--miel); }
-  footer a { color: inherit; text-decoration: underline; }
-</style>
 <!-- Google Ads (chargement différé : gtag.js n'est injecté qu'après consentement, voir cookie-consent.js) -->
 <script>
   window.dataLayer = window.dataLayer || [];
@@ -43,25 +18,39 @@
   };
 </script>
 <link rel="stylesheet" href="/cookie-consent.css">
+<link rel="stylesheet" href="/styles.css">
+<style>
+  body{min-height:100vh;display:flex;flex-direction:column}
+  .merci-header{background:var(--blanc);padding:18px clamp(20px,5vw,60px);box-shadow:0 2px 14px rgba(21,34,51,.08)}
+  main{flex:1;display:flex;align-items:center;justify-content:center;padding:60px 24px}
+  .merci-card{max-width:600px;text-align:center;background:var(--blanc);padding:56px 40px;border-radius:var(--radius);box-shadow:0 20px 50px rgba(30,27,46,.12);border:1px solid var(--bordure)}
+  .check{width:84px;height:84px;margin:0 auto 26px;background:var(--violet-clair);color:var(--violet);border-radius:50%;display:flex;align-items:center;justify-content:center;font-size:42px}
+  .merci-card h1{font-family:'Archivo',sans-serif;font-weight:700;font-size:clamp(1.6rem,4vw,2.1rem);color:var(--encre);margin-bottom:18px;letter-spacing:-.02em}
+  .merci-card p{font-size:1.08rem;line-height:1.7;color:var(--gris-texte);margin-bottom:16px}
+  .highlight{background:var(--violet-clair);padding:18px 22px;border-radius:14px;margin:24px 0;font-size:.98rem;color:var(--encre)}
+  .highlight strong{color:var(--violet)}
+  .merci-footer{background:var(--encre);color:rgba(242,240,246,.6);text-align:center;padding:24px;font-size:.82rem}
+  .merci-footer a{color:inherit;text-decoration:underline}
+</style>
 </head>
 <body>
-<header>
-  <a href="/" aria-label="Retour à l'accueil"><img src="/logo.png" alt="Numérique &amp; Vous" class="logo-svg"></a>
+<header class="merci-header">
+  <a href="/" aria-label="Retour à l'accueil"><img src="/logo.png" alt="Numérique &amp; Vous" style="height:44px"></a>
 </header>
 <main>
-  <div class="card">
+  <div class="merci-card">
     <div class="check">✓</div>
-    <h1>Demande bien reçue — devis gratuit sous 24 heures</h1>
-    <p>Merci, votre message a bien été envoyé. Je prends connaissance de votre demande et vous recontacte avec un diagnostic et un prix ferme, généralement sous 24 heures.</p>
+    <h1>Demande bien reçue — réponse sous 24 heures</h1>
+    <p>Merci, votre message a bien été envoyé. Je prends connaissance de votre demande et vous recontacte avec une proposition claire pour développer votre visibilité, généralement sous 24 heures.</p>
     <div class="highlight">
-      <p style="margin:0;">💡 <strong>Besoin urgent ?</strong> N'hésitez pas à m'appeler directement :</p>
+      <p style="margin:0"><strong>Besoin urgent&nbsp;?</strong> N'hésitez pas à m'appeler directement&nbsp;:</p>
     </div>
-    <a href="tel:+33667062185" class="btn" onclick="gtag('event','conversion_appel',{event_category:'contact'})">📞 06 67 06 21 85</a>
-    <p style="margin-top:32px; font-size:15px; color:#5b6c7d;">À très bientôt,<br><strong>Loïc</strong></p>
+    <a href="tel:+33667062185" class="btn gold" onclick="gtag('event','conversion_appel',{event_category:'contact'})">📞 06 67 06 21 85</a>
+    <p style="margin-top:28px;font-size:.95rem;color:var(--gris-doux)">À très bientôt,<br><strong style="color:var(--encre)">Loïc</strong></p>
   </div>
 </main>
-<footer>
-  <p>© 2026 <span>Numérique &amp; Vous</span> · Ollioules, Toulon &amp; environs — <a href="/mentions-legales">Mentions légales</a> · <a href="#" class="cookie-manage">Gérer mes cookies</a></p>
+<footer class="merci-footer">
+  <p>© 2026 Numérique &amp; Vous · Ollioules, Var — <a href="/mentions-legales">Mentions légales</a> · <a href="#" class="cookie-manage">Gérer mes cookies</a></p>
 </footer>
 <script defer src="/cookie-consent.js"></script>
 </body>
