@@ -451,3 +451,28 @@ a:focus-visible,button:focus-visible,input:focus-visible,textarea:focus-visible,
 .offer-solo .price .from{display:block;font-family:'Inter',sans-serif;font-size:.85rem;font-weight:500;color:var(--gris-doux);letter-spacing:0;margin-bottom:6px}
 .hero-ctas{display:flex;gap:12px;flex-wrap:wrap;align-items:center}
 .nv-copy .label{margin-bottom:22px}
+
+/* ---------- Offres sans prix ---------- */
+.offer .pitch{font-family:'Archivo',sans-serif;font-weight:700;font-size:clamp(1.6rem,3vw,2.1rem);color:#fff;letter-spacing:-.02em;line-height:1.15;margin:12px 0 10px}
+.offer-solo .pitch{font-family:'Archivo',sans-serif;font-weight:700;font-size:clamp(1.6rem,3vw,2.1rem);letter-spacing:-.02em;line-height:1.15;margin:8px 0 12px}
+.badge{display:inline-flex;align-items:center;gap:8px;font-size:.85rem;font-weight:600;padding:6px 12px;border-radius:4px;background:var(--violet-clair);color:var(--violet)}
+.dark .badge{background:rgba(196,181,253,.14);color:var(--lilas)}
+
+/* ---------- Offre de lancement (30 jours offerts) ---------- */
+.launch .bignum{-webkit-text-stroke-color:var(--violet);margin-bottom:6px}
+.launch .bignum small{font-size:.22em;-webkit-text-stroke:0;color:var(--violet);letter-spacing:0;font-weight:600;margin-left:10px}
+.launch .conditions{margin-top:28px;font-size:.88rem;color:var(--gris-doux);max-width:60ch}
+
+/* ---------- Réalisation unique ---------- */
+.feature{display:grid;grid-template-columns:1.35fr 1fr;gap:clamp(28px,5vw,64px);align-items:center}
+.feature .shot{display:block;position:relative;overflow:hidden;border-radius:4px;border:1px solid var(--filet);aspect-ratio:1200/633;background:var(--nuit)}
+.feature .shot img{width:100%;height:100%;object-fit:cover;object-position:top;transition:transform .8s var(--ease)}
+.feature a.shot:hover img{transform:scale(1.02)}
+.feature .tag{position:absolute;left:12px;top:12px;background:rgba(19,12,54,.86);color:#fff;font-size:.75rem;font-weight:600;padding:5px 10px;border-radius:3px}
+.feature h3{font-size:clamp(1.3rem,2.2vw,1.6rem);margin:6px 0 10px}
+.feature p{color:var(--gris-texte)}
+.feature ul{list-style:none;margin:22px 0 26px;border-top:1px solid var(--filet)}
+.feature li{display:flex;gap:12px;align-items:flex-start;padding:10px 0;border-bottom:1px solid var(--filet);font-size:.97rem}
+.feature li svg.i{color:var(--violet);width:18px;height:18px;margin-top:3px}
+.feature .work-note{margin-top:18px}
+@media (max-width:860px){.feature{grid-template-columns:1fr}}
