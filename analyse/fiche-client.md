@@ -13,7 +13,7 @@
 | E-mail | numeriquevous@gmail.com |
 | Site | https://www.numeriquevous.fr |
 | Année de création | 2026 |
-| Type d'activité | Se déplace chez ses clients du Var : **rendez-vous de livraison du site sur place, proposé à chaque client** (confirmé le 6/11/2026). Le reste du travail se fait à distance |
+| Type d'activité | Se déplace chez ses clients du Var : **rendez-vous de livraison du site sur place, chez chaque client** (confirmé le 6/11/2026). Audit et suivi en visio (FaceTime) |
 | Paiement | Virement bancaire |
 | Zone | Tout le Var. Clients plus lointains possibles à distance (non déclarable sur la fiche) |
 | Horaires | Variables (alternance BTS). Jeudi et vendredi en cours. Lundi, mardi, mercredi et samedi : travail en entreprise le matin ou l'après-midi selon le planning. **Pas d'horaires fixes garantis** |

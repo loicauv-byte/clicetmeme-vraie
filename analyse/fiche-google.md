@@ -6,7 +6,7 @@
 
 ## 0. VERDICT D'ÉLIGIBILITÉ : ÉLIGIBLE
 
-**Établissement de services de proximité** (confirmé par Loïc le 6 novembre 2026) : Numérique & Vous rencontre chaque client du Var en personne, au minimum lors d'un **rendez-vous de livraison du site** chez lui. Le domicile ne reçoit pas de clients : **adresse masquée**, zone desservie = le Var (moins de 2 h de trajet).
+**Établissement de services de proximité** (confirmé par Loïc le 6 novembre 2026) : Numérique & Vous rencontre chaque client du Var en personne lors d'un **rendez-vous de livraison du site**, chez lui. L'audit et le suivi se font en visio (FaceTime). Le domicile ne reçoit pas de clients : **adresse masquée**, zone desservie = le Var (moins de 2 h de trajet).
 
 > Condition à tenir : chaque client du Var se voit proposer ce rendez-vous. Si la pratique s'arrête, la fiche n'est plus conforme.
 
@@ -217,7 +217,7 @@ Nous répondons aux messages du lundi au samedi et rappelons sous 24 heures. Les
 ```
 **« Vous déplacez-vous ? »**
 ```
-Oui, dans tout le Var, pour l'audit ou la livraison de votre site. Nous travaillons aussi à distance si vous le préférez.
+Oui, dans tout le Var, pour la livraison de votre site. L'audit et le suivi se font en visio, pour vous faire gagner du temps.
 ```
 **« Combien coûte un site ? »**
 ```
