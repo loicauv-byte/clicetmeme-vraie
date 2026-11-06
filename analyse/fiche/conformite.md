@@ -4,7 +4,7 @@
 
 | Point | Règle Google | Verdict | Correction faite |
 |---|---|---|---|
-| Éligibilité | Contact en personne avec les clients pendant les horaires | **DOUTE** : activité surtout à distance | Fiche conditionnée à des rendez-vous sur place réels. Sinon, fermeture de la fiche recommandée plutôt qu'une conversion |
+| Éligibilité | Contact en personne avec les clients pendant les horaires | **ÉLIGIBLE** : rendez-vous de livraison sur place confirmé | Adresse masquée, zone Var |
 | Nom | Pas de mot-clé, de ville, de slogan | Conforme : « Numérique & Vous » seul | — |
 | Adresse | Domicile sans accueil client = adresse masquée | Conforme : masquée | Avertissement sur la nouvelle validation ajouté |
 | Zone | 2 h de trajet maximum | Conforme : tout le Var est à moins de 2 h d'Ollioules (Fréjus ≈ 1 h, Draguignan ≈ 1 h) | Clients hors Var à distance exclus de la zone |
@@ -15,6 +15,6 @@
 | Photos | Photos réelles uniquement | Conforme : logo + visuel de marque. Démo légendée « Site de démonstration » | Banque d'images exclue |
 | Avis | Pas de contrepartie, pas de tri, pas de pression, pas de contenu dicté | Conforme | Mention « pas de mois offert contre un avis » ajoutée, l'offre 30 jours étant commerciale |
 | Validation | Pas de faux local | Conforme | Contenu vidéo adapté à une activité sans local |
-| Questions-réponses | Disponible selon les catégories et régions | [À VÉRIFIER] | Réponses rédigées. Paiement laissé [À DEMANDER] |
+| Questions-réponses | Disponible selon les catégories et régions | [À VÉRIFIER] | Réponses rédigées. Paiement : virement |
 
-**Une incohérence corrigée** : la réponse « Vous déplacez-vous ? Oui, dans tout le Var » n'est vraie que si Loïc confirme les rendez-vous sur place (point 0). Elle est donc liée au verdict d'éligibilité.
+**Une incohérence corrigée** : la réponse « Vous déplacez-vous ? Oui, dans tout le Var » est vraie : Loïc a confirmé les rendez-vous de livraison sur place.

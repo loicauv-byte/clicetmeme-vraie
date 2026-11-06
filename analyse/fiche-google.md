@@ -4,21 +4,11 @@
 
 ---
 
-## 0. VERDICT D'ÉLIGIBILITÉ : DOUTE
+## 0. VERDICT D'ÉLIGIBILITÉ : ÉLIGIBLE
 
-**Règle Google** : la fiche est réservée aux entreprises qui ont un **contact en personne** avec leurs clients pendant leurs horaires (dans leurs locaux, ou en se déplaçant chez eux). Une activité entièrement à distance (téléphone, visio, en ligne) n'est **pas éligible**.
+**Établissement de services de proximité** (confirmé par Loïc le 6 novembre 2026) : Numérique & Vous rencontre chaque client du Var en personne, au minimum lors d'un **rendez-vous de livraison du site** chez lui. Le domicile ne reçoit pas de clients : **adresse masquée**, zone desservie = le Var (moins de 2 h de trajet).
 
-**Ta situation** : « normalement je ne me déplace pas chez les clients, mais pourquoi pas s'ils veulent me rencontrer ». En l'état, c'est une activité **surtout à distance**, donc à la limite.
-
-**Comment devenir ÉLIGIBLE, honnêtement** : faire du rendez-vous sur place une **pratique réelle et proposée à chaque client** du Var, par exemple :
-- un rendez-vous chez l'artisan pour l'audit ou la signature ;
-- **un rendez-vous de livraison du site**, chez lui. C'est exactement le moment que ta formation recommande pour proposer les 30 jours de Google Ads.
-
-Si tu t'y engages, tu es un **établissement de services de proximité** : adresse **masquée**, zone desservie = le Var. Tout ce qui suit est préparé pour ce cas.
-
-**Si tu ne veux pas te déplacer** : ne transforme pas la fiche en agence web. Elle risque une suspension (perte de l'avis compris). Dans ce cas, mieux vaut la mettre en « Fermé définitivement » et miser sur le référencement du site.
-
-> Rien n'est à modifier tant que tu n'as pas tranché ce point.
+> Condition à tenir : chaque client du Var se voit proposer ce rendez-vous. Si la pratique s'arrête, la fiche n'est plus conforme.
 
 ---
 
@@ -239,14 +229,14 @@ Cela dépend du nombre de pages et de la disponibilité de vos textes et photos.
 ```
 **« Comment se fait le paiement ? »**
 ```
-[À DEMANDER : virement, acompte à la commande ?]
+Le règlement se fait par virement bancaire. Les modalités (acompte, échéances) sont précisées dans le devis.
 ```
 
 ---
 
 ## Ordre de saisie conseillé (30 minutes)
 
-1. Trancher le point 0 (rendez-vous sur place : oui ou non).
+1. ~~Point 0~~ : tranché, rendez-vous de livraison sur place.
 2. Catégories (point 2).
 3. Description (point 3).
 4. Services (point 4).
