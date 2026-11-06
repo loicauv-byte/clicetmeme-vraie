@@ -3,7 +3,7 @@
 ## Qui / quoi
 - Loïc Auvray, 19 ans, entrepreneur individuel à Ollioules (Var), SIRET 939 882 957 00029. Aussi alternant BTS MCO (Castorama La Garde) et fondateur de Clic & Mémé (aide numérique seniors).
 - Numérique & Vous : création de sites internet + gestion Google Ads pour artisans et TPE du Var (plombiers, électriciens, chauffagistes, couvreurs…).
-- AUCUN PRIX affiché sur le site : tout est sur devis après audit gratuit. Offre de lancement : 30 jours de diffusion Google Ads offerts (gestion + pub) à la livraison d'un site, compteur au premier affichage, sous réserve de volume de recherches. Pub achetée au nom du client via contrat de mandat (loi Sapin), refacturée au centime sans marge, gestion et pub sur 2 lignes, facturées d'avance ; sans accord écrit, pub en pause.
+- AUCUN PRIX affiché sur le site : tout est sur devis après audit gratuit. Prix réels des sites (info interne) : plus de 1 000 € depuis nov. 2026 (sites animés, sur mesure) ; les anciens 499 € / 199 € sont obsolètes. Offre de lancement : 30 jours de diffusion Google Ads offerts (gestion + pub) à la livraison d'un site, compteur au premier affichage, sous réserve de volume de recherches. Pub achetée au nom du client via contrat de mandat (loi Sapin), refacturée au centime sans marge, gestion et pub sur 2 lignes, facturées d'avance ; sans accord écrit, pub en pause.
 - Contact : 06 67 06 21 85, numeriquevous@gmail.com. Formulaire via Formspree.
 
 ## Préférences de travail de Loïc
